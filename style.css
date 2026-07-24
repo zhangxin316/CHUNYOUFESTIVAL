@@ -55,3 +55,40 @@ h1{
 .menu a:hover{
     color:#fff;
 }
+.archive{
+    min-height:100vh;
+    background:#000;
+    color:#fff;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+}
+
+
+.archive h1{
+    font-size:32px;
+    letter-spacing:6px;
+    margin-bottom:60px;
+}
+
+
+.years{
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+    text-align:center;
+}
+
+
+.years a{
+    color:#888;
+    text-decoration:none;
+    font-size:20px;
+    letter-spacing:3px;
+}
+
+
+.years a:hover{
+    color:#fff;
+}
