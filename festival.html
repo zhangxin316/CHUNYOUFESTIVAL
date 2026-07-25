@@ -12,48 +12,92 @@
 
 <style>
 
-.festival-item {
-  margin: 60px 0;
+.festival-container {
+  max-width: 900px;
+  margin: 120px auto;
   text-align: center;
 }
 
-.festival-item h2 {
-  cursor: pointer;
+
+.festival-item {
+  margin-bottom: 80px;
 }
 
-.content {
-  display: none;
-  max-width: 700px;
-  margin: 40px auto;
-  line-height: 1.8;
-  text-align: left;
+
+.festival-item h2 {
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 1.4;
+  margin: 0;
+  cursor: default;
 }
+
+
+.content {
+  max-width: 720px;
+  margin: 45px auto 0;
+  text-align: left;
+  line-height: 1.9;
+
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+
+  transition:
+  opacity 0.6s ease,
+  max-height 0.8s ease;
+}
+
+
+.festival-item:hover .content {
+
+  opacity: 1;
+  max-height: 1000px;
+
+}
+
+
+.content p {
+
+  margin-bottom: 28px;
+
+}
+
+
+.content a {
+
+  display: inline-block;
+  margin-top: 20px;
+
+}
+
+
 
 </style>
 
 </head>
 
 
+
 <body>
 
 
-<main class="hero">
-
-
-<h1>Festival</h1>
+<main class="festival-container">
 
 
 
 <section class="festival-item">
 
-<h2 onclick="toggleContent('about')">
+
+<h2>
 About CHUNYOU
 <br>
 关于春游
 </h2>
 
 
-<div id="about" class="content">
+<div class="content">
+
 
 <p>
 春游（CHUNYOU FESTIVAL）创立于2013年，是一个以独立音乐和青年文化为核心的文化节。
@@ -77,44 +121,51 @@ Starting from live music experiences, CHUNYOU continues to explore the relations
 </p>
 
 <p>
-Over the years, CHUNYOU has become a cultural gathering place for musicians, artists, and audiences.
+Over the years, CHUNYOU has become a cultural gathering place for musicians, artists, and audiences, while continuing to support the development of independent culture.
 </p>
 
+
 </div>
+
 
 </section>
 
 
 
+
 <section class="festival-item">
 
-<h2 onclick="toggleContent('organizer')">
+
+<h2>
 Organizer
 <br>
 主办方
 </h2>
 
 
-<div id="organizer" class="content">
-
-<p>
-MorningChengdu 于2009年在成都成立，致力于支持独立原创音乐，并为青年艺术家创造机会。
-</p>
-
-<p>
-通过音乐项目和现场演出，MorningChengdu 持续推动年轻创作者交流，并与社区建立连接。
-</p>
+<div class="content">
 
 
 <p>
-Founded in Chengdu in 2009, MorningChengdu supports independent original music and creates opportunities for young artists.
+MorningChengdu 于2009年在成都成立，致力于支持独立原创音乐，并为青年艺术家创造更多表达与发展的机会。
 </p>
 
 <p>
-Through music projects and live performances, MorningChengdu encourages creativity and connection within communities.
+通过音乐项目、现场演出以及文化实践，Morning Chengdu 持续推动年轻创作者之间的交流，激发创造力，并与社区建立长期连接。
 </p>
+
+
+<p>
+Founded in Chengdu in 2009, MorningChengdu is dedicated to supporting independent original music and creating opportunities for young artists.
+</p>
+
+<p>
+Through music projects, live performances, and cultural practices, MorningChengdu encourages young creators to express themselves, develop their creativity, and build connections with communities.
+</p>
+
 
 </div>
+
 
 </section>
 
@@ -123,21 +174,23 @@ Through music projects and live performances, MorningChengdu encourages creativi
 
 <section class="festival-item">
 
-<h2 onclick="toggleContent('network')">
+
+<h2>
 Network
 <br>
 网络
 </h2>
 
 
-<div id="network" class="content">
+<div class="content">
+
 
 <p>
 自2013年以来，春游逐渐建立起一个连接音乐人、艺术家、空间、机构以及参与者的文化网络。
 </p>
 
 <p>
-通过多年的合作与交流，这些关系成为春游持续发展的重要基础。
+通过多年的合作与交流，这些关系成为春游持续发展的重要基础，也构成了春游文化生态的一部分。
 </p>
 
 
@@ -146,7 +199,7 @@ Since 2013, CHUNYOU has been building a cultural network that connects musicians
 </p>
 
 <p>
-Through years of collaboration and exchange, these connections have become an essential part of CHUNYOU’s identity.
+Through years of collaboration and exchange, these connections have become an essential part of CHUNYOU’s development and cultural identity.
 </p>
 
 
@@ -157,33 +210,12 @@ Explore CHUNYOU Family →
 
 </div>
 
+
 </section>
 
 
 
 </main>
-
-
-
-<script>
-
-function toggleContent(id){
-
-let content = document.getElementById(id);
-
-if(content.style.display === "block"){
-
-content.style.display = "none";
-
-}else{
-
-content.style.display = "block";
-
-}
-
-}
-
-</script>
 
 
 </body>
