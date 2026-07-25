@@ -5,31 +5,46 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Festival | CHUNYOU</title>
+
 <link rel="stylesheet" href="style.css" />
+
+<style>
+
+.content {
+  display: none;
+}
+
+.festival-item h2 {
+  cursor: pointer;
+}
+
+.festival-item {
+  margin-bottom: 60px;
+}
+
+</style>
+
 </head>
+
 
 <body>
 
+
 <main class="page">
-  
-<img src="logo.png" alt="CHUNYOU Logo" class="logo">
 
-<p class="since">EST. 2013</p>
 
-<nav class="menu">
-  <a href="archive.html">Archive</a>
-  <a href="festival.html">Festival</a>
-  <a href="#">News</a>
-  <a href="#">Family</a>
-  <a href="#">Contact</a>
-</nav>
 <h1>Festival</h1>
 
 
-<section>
+<section class="festival-item">
 
-<h2>About CHUNYOU</h2>
-<h3>关于春游</h3>
+<h2 onclick="toggleContent('about')">
+About CHUNYOU
+<br>
+关于春游
+</h2>
+
+<div id="about" class="content">
 
 <p>
 春游（CHUNYOU FESTIVAL）创立于2013年，是一个以独立音乐和青年文化为核心的文化节。
@@ -56,14 +71,22 @@ Starting from live music experiences, CHUNYOU continues to explore the relations
 Over the years, CHUNYOU has become a cultural gathering place for musicians, artists, and audiences, while continuing to support the development of independent culture.
 </p>
 
+</div>
+
 </section>
 
 
 
-<section>
+<section class="festival-item">
 
-<h2>Organizer</h2>
-<h3>主办方</h3>
+<h2 onclick="toggleContent('organizer')">
+Organizer
+<br>
+主办方
+</h2>
+
+
+<div id="organizer" class="content">
 
 <p>
 MorningChengdu 于2009年在成都成立，致力于支持独立原创音乐，并为青年艺术家创造更多表达与发展的机会。
@@ -82,14 +105,24 @@ Founded in Chengdu in 2009, MorningChengdu is dedicated to supporting independen
 Through music projects, live performances, and cultural practices, MorningChengdu encourages young creators to express themselves, develop their creativity, and build connections with communities.
 </p>
 
+</div>
+
 </section>
 
 
 
-<section>
+<section class="festival-item">
 
-<h2>Network</h2>
-<h3>网络</h3>
+
+<h2 onclick="toggleContent('network')">
+Network
+<br>
+网络
+</h2>
+
+
+<div id="network" class="content">
+
 
 <p>
 自2013年以来，春游逐渐建立起一个连接音乐人、艺术家、空间、机构以及参与者的文化网络。
@@ -113,10 +146,33 @@ Through years of collaboration and exchange, these connections have become an es
 Explore CHUNYOU Family →
 </a>
 
+
+</div>
+
 </section>
 
 
+
 </main>
+
+
+
+<script>
+
+function toggleContent(id) {
+
+  const content = document.getElementById(id);
+
+  if (content.style.display === "block") {
+    content.style.display = "none";
+  } else {
+    content.style.display = "block";
+  }
+
+}
+
+</script>
+
 
 </body>
 
