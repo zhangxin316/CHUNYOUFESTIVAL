@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
@@ -12,20 +13,12 @@
 <style>
 
 .festival-item {
-  margin-top: 60px;
+  margin: 60px 0;
   text-align: center;
 }
 
 .festival-item h2 {
   cursor: pointer;
-  font-size: 28px;
-  margin-bottom: 10px;
-}
-
-.festival-item h3 {
-  cursor: pointer;
-  font-size: 18px;
-  font-weight: normal;
 }
 
 .content {
@@ -35,16 +28,6 @@
   line-height: 1.8;
   text-align: left;
 }
-
-.content p {
-  margin-bottom: 25px;
-}
-
-.content a {
-  display: inline-block;
-  margin-top: 20px;
-}
-
 
 </style>
 
@@ -57,51 +40,20 @@
 <main class="hero">
 
 
-<img src="logo.png" alt="CHUNYOU Logo" class="logo">
-
-
-<h1>CHUNYOU FESTIVAL</h1>
-
-
-<p class="since">EST. 2013</p>
-
-
-<nav class="menu">
-
-<a href="archive.html">Archive</a>
-
-<a href="festival.html">Festival</a>
-
-<a href="#">News</a>
-
-<a href="#">Family</a>
-
-<a href="#">Contact</a>
-
-</nav>
-
-
-
-<h2 class="page-title">
-Festival
-</h2>
+<h1>Festival</h1>
 
 
 
 <section class="festival-item">
 
-
 <h2 onclick="toggleContent('about')">
 About CHUNYOU
-</h2>
-
-<h3 onclick="toggleContent('about')">
+<br>
 关于春游
-</h3>
+</h2>
 
 
 <div id="about" class="content">
-
 
 <p>
 春游（CHUNYOU FESTIVAL）创立于2013年，是一个以独立音乐和青年文化为核心的文化节。
@@ -125,82 +77,67 @@ Starting from live music experiences, CHUNYOU continues to explore the relations
 </p>
 
 <p>
-Over the years, CHUNYOU has become a cultural gathering place for musicians, artists, and audiences, while continuing to support the development of independent culture.
+Over the years, CHUNYOU has become a cultural gathering place for musicians, artists, and audiences.
 </p>
 
-
 </div>
-
 
 </section>
 
 
 
-
-
 <section class="festival-item">
-
 
 <h2 onclick="toggleContent('organizer')">
 Organizer
-</h2>
-
-<h3 onclick="toggleContent('organizer')">
+<br>
 主办方
-</h3>
+</h2>
 
 
 <div id="organizer" class="content">
 
-
 <p>
-MorningChengdu 于2009年在成都成立，致力于支持独立原创音乐，并为青年艺术家创造更多表达与发展的机会。
+MorningChengdu 于2009年在成都成立，致力于支持独立原创音乐，并为青年艺术家创造机会。
 </p>
 
 <p>
-通过音乐项目、现场演出以及文化实践，MorningChengdu 持续推动年轻创作者之间的交流，激发创造力，并与社区建立长期连接。
+通过音乐项目和现场演出，MorningChengdu 持续推动年轻创作者交流，并与社区建立连接。
 </p>
 
 
 <p>
-Founded in Chengdu in 2009, MorningChengdu is dedicated to supporting independent original music and creating opportunities for young artists.
+Founded in Chengdu in 2009, MorningChengdu supports independent original music and creates opportunities for young artists.
 </p>
 
 <p>
-Through music projects, live performances, and cultural practices, MorningChengdu encourages young creators to express themselves, develop their creativity, and build connections with communities.
+Through music projects and live performances, MorningChengdu encourages creativity and connection within communities.
 </p>
-
 
 </div>
-
 
 </section>
 
 
 
 
-
 <section class="festival-item">
-
 
 <h2 onclick="toggleContent('network')">
 Network
-</h2>
-
-<h3 onclick="toggleContent('network')">
+<br>
 网络
-</h3>
+</h2>
 
 
 <div id="network" class="content">
-
 
 <p>
 自2013年以来，春游逐渐建立起一个连接音乐人、艺术家、空间、机构以及参与者的文化网络。
 </p>
 
 <p>
-通过多年的合作与交流，这些关系成为春游持续发展的重要基础，也构成了春游文化生态的一部分。
+通过多年的合作与交流，这些关系成为春游持续发展的重要基础。
 </p>
 
 
@@ -209,7 +146,7 @@ Since 2013, CHUNYOU has been building a cultural network that connects musicians
 </p>
 
 <p>
-Through years of collaboration and exchange, these connections have become an essential part of CHUNYOU’s development and cultural identity.
+Through years of collaboration and exchange, these connections have become an essential part of CHUNYOU’s identity.
 </p>
 
 
@@ -219,7 +156,6 @@ Explore CHUNYOU Family →
 
 
 </div>
-
 
 </section>
 
@@ -231,15 +167,15 @@ Explore CHUNYOU Family →
 
 <script>
 
-function toggleContent(id) {
+function toggleContent(id){
 
-const content = document.getElementById(id);
+let content = document.getElementById(id);
 
-if (content.style.display === "block") {
+if(content.style.display === "block"){
 
 content.style.display = "none";
 
-} else {
+}else{
 
 content.style.display = "block";
 
@@ -248,7 +184,6 @@ content.style.display = "block";
 }
 
 </script>
-
 
 
 </body>
