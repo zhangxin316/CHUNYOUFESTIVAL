@@ -265,6 +265,46 @@ h1{
         max-width:none;
 
     }
+.archive-text hr {
 
+    border:none;
+    border-top:1px solid #333;
+    margin:35px 0;
 
 }
+
+
+/* Gallery Button */
+
+.archive-gallery {
+
+    margin-top:40px;
+
+}
+
+
+.archive-gallery a {
+
+    color:#888;
+    text-decoration:none;
+    font-size:14px;
+    letter-spacing:2px;
+
+    border:1px solid #444;
+
+    padding:10px 20px;
+
+    display:inline-block;
+
+    transition:0.3s;
+
+}
+
+
+.archive-gallery a:hover {
+
+    color:#fff;
+    border-color:#fff;
+
+}
+
