@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -15,45 +17,52 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
+
 .container {
     width: 90%;
     max-width: 1200px;
     margin: 80px auto;
     display: flex;
-    gap: 80px;
+    gap: 70px;
     align-items: flex-start;
 }
 
 
-/* 左侧海报 */
+/* Poster */
 
 .poster {
     width: 45%;
 }
 
+
 .poster img {
     width: 100%;
-    height: auto;
+    display: block;
 }
 
 
-/* 右侧文字 */
+
+/* Content */
 
 .content {
     width: 55%;
 }
 
+
 h1 {
     font-size: 32px;
     font-weight: 500;
-    margin-bottom: 10px;
+    margin: 0 0 15px;
 }
 
+
 .date {
-    font-size: 16px;
+    font-size: 14px;
+    line-height: 1.8;
     opacity: 0.7;
-    margin-bottom: 40px;
+    margin-bottom: 45px;
 }
+
 
 
 .text {
@@ -67,43 +76,72 @@ h1 {
 }
 
 
+
+.line {
+
+    border-top:1px solid #333;
+    margin:60px 0;
+
+}
+
+
+
+/* Gallery Button */
+
 .gallery {
-    margin-top: 50px;
+
+    margin-top:50px;
+
 }
 
 
 .gallery a {
-    color: white;
-    border: 1px solid white;
-    padding: 12px 30px;
-    text-decoration: none;
-    font-size: 14px;
+
+    display:inline-block;
+    color:white;
+    border:1px solid white;
+    padding:12px 30px;
+    text-decoration:none;
+    font-size:14px;
+
 }
 
 
 .gallery a:hover {
-    background: white;
-    color: black;
+
+    background:white;
+    color:black;
+
 }
 
+
+
+/* Mobile */
 
 @media(max-width:800px){
 
 .container{
+
     flex-direction:column;
     gap:40px;
+
 }
+
 
 .poster,
 .content{
+
     width:100%;
+
 }
 
 }
+
 
 </style>
 
 </head>
+
 
 
 <body>
@@ -111,6 +149,8 @@ h1 {
 
 <div class="container">
 
+
+<!-- LEFT POSTER -->
 
 <div class="poster">
 
@@ -120,19 +160,28 @@ h1 {
 
 
 
+<!-- RIGHT CONTENT -->
+
 <div class="content">
 
 
 <h1>CHUNYOU 2013</h1>
 
+
 <div class="date">
+
 April 20, 2013<br>
+
 Morning Chengdu
+
 </div>
+
 
 
 <div class="text">
 
+
+<!-- Chinese -->
 
 <p>
 成都的春天，雨水较少，阳光明媚，温度舒适。
@@ -164,7 +213,47 @@ Morning Chengdu
 </p>
 
 
+
+<div class="line"></div>
+
+
+
+<!-- English -->
+
+
+<p>
+Spring in Chengdu is usually mild and comfortable, with less rain, plenty of sunshine, and a pleasant temperature.
+</p>
+
+
+<p>
+For many people in China, the word “Chunyou” (Spring Outing) carries unforgettable memories from childhood. Through live music and parties, we wanted to rediscover the simplicity and happiness of those early days.
+</p>
+
+
+<p>
+On April 20, 2013, the first CHUNYOU took place at the physical space of Morning Chengdu.
+</p>
+
+
+<p>
+At that time, CHUNYOU could not yet be called a “festival”. It was more like a gathering among friends. Two simple stages were built in the front yard and backyard of the space — one for bands and one for DJs. Outside the entrance, a small second-hand market naturally appeared along the street.
+</p>
+
+
+<p>
+The musicians performing and the people who came to the event were all connected through friendships — friends, friends of friends, and friends of friends of friends. Together, they created a natural, relaxed and joyful atmosphere.
+</p>
+
+
+<p>
+This spirit of freedom, openness, and human connection became the emotional foundation that continued throughout every CHUNYOU that followed.
+</p>
+
+
+
 </div>
+
 
 
 <div class="gallery">
@@ -176,6 +265,7 @@ Gallery / 图库
 </div>
 
 
+
 </div>
 
 
@@ -183,4 +273,5 @@ Gallery / 图库
 
 
 </body>
+
 </html>
