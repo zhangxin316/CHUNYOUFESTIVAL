@@ -15,7 +15,7 @@
 <body>
 <nav class="site-menu">
 
-    <a href="#">MENU</a>
+   <a href="#" id="menu-button">MENU</a>
 
     <div class="menu-list">
 
@@ -54,6 +54,35 @@
 </main>
 
 
+
+<script>
+
+const menuButton = document.getElementById("menu-button");
+
+const menuList = document.querySelector(".menu-list");
+
+
+menuButton.onclick = function(e){
+
+    e.preventDefault();
+
+
+    if(menuList.style.display === "flex"){
+
+        menuList.style.display = "none";
+
+    }else{
+
+        menuList.style.display = "flex";
+
+    }
+
+}
+
+</script>
+
+
 </body>
 
 </html>
+
