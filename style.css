@@ -11,72 +11,117 @@ body{
     font-family:"Inter","Noto Sans SC","Helvetica Neue",Arial,sans-serif;
 }
 
-/* Homepage */
+
+/* =========================
+   Homepage
+   ========================= */
+
 
 .hero{
+
     min-height:100vh;
+
     display:flex;
+
     flex-direction:column;
+
     justify-content:center;
+
     align-items:center;
+
 }
 
 
 .logo{
+
     width:120px;
+
     margin-bottom:35px;
+
 }
 
 
 h1{
+
     font-size:34px;
+
     font-weight:600;
+
     letter-spacing:6px;
+
     margin-bottom:10px;
+
 }
 
 
 .since{
+
     font-size:14px;
+
     color:#888;
+
     letter-spacing:4px;
+
     margin-bottom:55px;
+
 }
 
 
 .menu{
+
     display:flex;
+
     flex-direction:column;
+
     align-items:center;
+
     gap:18px;
+
 }
 
 
 .menu a{
+
     color:#888;
+
     text-decoration:none;
+
     font-size:18px;
+
     letter-spacing:2px;
+
     transition:0.3s;
+
 }
 
 
 .menu a:hover{
+
     color:#fff;
+
 }
 
 
 
-/* Archive year list */
+/* =========================
+   Archive year list
+   ========================= */
+
 
 .archive{
 
     min-height:100vh;
+
     background:#000;
+
     color:#fff;
+
     display:flex;
+
     flex-direction:column;
+
     justify-content:center;
+
     align-items:center;
 
 }
@@ -85,7 +130,9 @@ h1{
 .archive h1{
 
     font-size:32px;
+
     letter-spacing:6px;
+
     margin-bottom:60px;
 
 }
@@ -94,8 +141,11 @@ h1{
 .years{
 
     display:flex;
+
     flex-direction:column;
+
     gap:20px;
+
     text-align:center;
 
 }
@@ -104,8 +154,11 @@ h1{
 .years a{
 
     color:#888;
+
     text-decoration:none;
+
     font-size:20px;
+
     letter-spacing:3px;
 
 }
@@ -120,15 +173,18 @@ h1{
 
 
 /* =========================
-   CHUNYOU ARCHIVE DETAIL
+   Archive detail page
    ========================= */
 
 
 .archive-page{
 
     min-height:100vh;
+
     background:#000;
+
     color:#fff;
+
     padding:50px 40px;
 
 }
@@ -138,6 +194,7 @@ h1{
 .archive-header{
 
     font-size:16px;
+
     margin-bottom:50px;
 
 }
@@ -146,29 +203,30 @@ h1{
 .archive-header a{
 
     color:#fff;
+
     text-decoration:none;
 
 }
 
 
 
-/* layout */
-
 .archive-detail{
 
     display:flex;
+
     justify-content:center;
+
     align-items:flex-start;
+
     gap:70px;
 
     max-width:1000px;
+
     margin:0 auto;
 
 }
 
 
-
-/* poster */
 
 .archive-poster{
 
@@ -177,21 +235,23 @@ h1{
 }
 
 
+
 .archive-poster img{
 
     width:100%;
+
     height:auto;
+
     display:block;
 
 }
 
 
 
-/* text */
-
 .archive-text{
 
     width:45%;
+
     max-width:420px;
 
 }
@@ -200,8 +260,11 @@ h1{
 .archive-text h1{
 
     font-size:32px;
+
     font-weight:500;
+
     letter-spacing:5px;
+
     margin-bottom:30px;
 
 }
@@ -211,7 +274,9 @@ h1{
 .archive-text p{
 
     font-size:14px;
+
     line-height:1.6;
+
     margin-bottom:14px;
 
 }
@@ -221,6 +286,7 @@ h1{
 .archive-text .english{
 
     font-size:13px;
+
     line-height:1.6;
 
 }
@@ -230,53 +296,28 @@ h1{
 .archive-text hr{
 
     border:none;
+
     border-top:1px solid #333;
+
     margin:35px 0;
 
 }
 
 
 
-/* mobile */
-
-@media (max-width:800px){
-
-    .archive-page{
-
-        padding:30px 20px;
-
-    }
+/* =========================
+   Gallery Button
+   ========================= */
 
 
-    .archive-detail{
-
-        flex-direction:column;
-        gap:40px;
-
-    }
-
-
-    .archive-poster,
-    .archive-text{
-
-        width:100%;
-        max-width:none;
-
-    }
-
-}
-
-
-/* Gallery Button */
-
-.archive-gallery {
+.archive-gallery{
 
     margin-top:40px;
 
 }
 
 
-.archive-gallery a {
+.archive-gallery a{
 
     color:#888;
 
@@ -297,7 +338,7 @@ h1{
 }
 
 
-.archive-gallery a:hover {
+.archive-gallery a:hover{
 
     color:#fff;
 
@@ -307,20 +348,24 @@ h1{
 
 
 
-/* Site Menu */
+/* =========================
+   Site Menu
+   ========================= */
 
-.site-menu {
+
+.site-menu{
 
     position:absolute;
 
-    top:40px;
+    top:50px;
 
-    right:40px;
+    right:50px;
 
 }
 
 
-.site-menu a {
+
+.site-menu > a{
 
     color:#fff;
 
@@ -330,22 +375,105 @@ h1{
 
     font-weight:700;
 
-    letter-spacing:3px;
+    letter-spacing:5px;
 
     transition:0.3s;
 
 }
 
 
-.site-menu a:visited {
+
+.site-menu > a:visited{
 
     color:#fff;
 
 }
 
 
-.site-menu a:hover {
+
+.site-menu > a:hover{
 
     color:#888;
+
+}
+
+
+
+/* Menu List */
+
+
+.menu-list{
+
+    display:none;
+
+    margin-top:25px;
+
+    flex-direction:column;
+
+    gap:18px;
+
+}
+
+
+
+.menu-list a{
+
+    color:#fff;
+
+    text-decoration:none;
+
+    font-size:16px;
+
+    font-weight:400;
+
+    letter-spacing:3px;
+
+}
+
+
+
+.menu-list a:hover{
+
+    color:#888;
+
+}
+
+
+
+/* =========================
+   Mobile
+   ========================= */
+
+
+@media(max-width:800px){
+
+
+    .archive-page{
+
+        padding:30px 20px;
+
+    }
+
+
+
+    .archive-detail{
+
+        flex-direction:column;
+
+        gap:40px;
+
+    }
+
+
+
+    .archive-poster,
+    .archive-text{
+
+        width:100%;
+
+        max-width:none;
+
+    }
+
 
 }
