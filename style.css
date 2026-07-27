@@ -4,11 +4,15 @@
     box-sizing:border-box;
 }
 
+
 body{
     background:#000;
     color:#fff;
     font-family:Helvetica, Arial, sans-serif;
 }
+
+
+/* Homepage */
 
 .hero{
     min-height:100vh;
@@ -18,10 +22,12 @@ body{
     align-items:center;
 }
 
+
 .logo{
     width:120px;
     margin-bottom:35px;
 }
+
 
 h1{
     font-size:34px;
@@ -30,6 +36,7 @@ h1{
     margin-bottom:10px;
 }
 
+
 .since{
     font-size:14px;
     color:#888;
@@ -37,12 +44,14 @@ h1{
     margin-bottom:55px;
 }
 
+
 .menu{
     display:flex;
     flex-direction:column;
     align-items:center;
     gap:18px;
 }
+
 
 .menu a{
     color:#888;
@@ -52,10 +61,17 @@ h1{
     transition:0.3s;
 }
 
+
 .menu a:hover{
     color:#fff;
 }
+
+
+
+/* Archive year list */
+
 .archive{
+
     min-height:100vh;
     background:#000;
     color:#fff;
@@ -63,159 +79,192 @@ h1{
     flex-direction:column;
     justify-content:center;
     align-items:center;
+
 }
 
 
 .archive h1{
+
     font-size:32px;
     letter-spacing:6px;
     margin-bottom:60px;
+
 }
 
 
 .years{
+
     display:flex;
     flex-direction:column;
     gap:20px;
     text-align:center;
+
 }
 
 
 .years a{
+
     color:#888;
     text-decoration:none;
     font-size:20px;
     letter-spacing:3px;
+
 }
 
 
 .years a:hover{
+
     color:#fff;
+
 }
-/* Archive detail page */
+
+
 
 /* =========================
    CHUNYOU ARCHIVE DETAIL
    ========================= */
 
 
-.archive-page {
+.archive-page{
 
-    min-height: 100vh;
-    background: #000;
-    color: #fff;
-    padding: 50px 40px;
-
-}
-
-
-.archive-header {
-
-    font-size: 16px;
-    margin-bottom: 50px;
-
-}
-
-
-.archive-header a {
-
-    color: #fff;
-    text-decoration: none;
+    min-height:100vh;
+    background:#000;
+    color:#fff;
+    padding:50px 40px;
 
 }
 
 
 
-.archive-detail {
+.archive-header{
 
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    gap: 80px;
+    font-size:16px;
+    margin-bottom:50px;
 
-    max-width: 1200px;
-    margin: 0 auto;
+}
+
+
+.archive-header a{
+
+    color:#fff;
+    text-decoration:none;
 
 }
 
 
 
-.archive-poster {
+/* layout */
 
-    width: 28%;
+.archive-detail{
 
-}
+    display:flex;
+    justify-content:center;
+    align-items:flex-start;
+    gap:70px;
 
-
-.archive-poster img {
-
-    width: 100%;
-    height: auto;
-    display: block;
-
-}
-
-
-
-.archive-text {
-
-    width: 42%;
-    max-width: 450px;
+    max-width:1000px;
+    margin:0 auto;
 
 }
 
 
-.archive-text h1 {
 
-    font-size: 36px;
-    font-weight: 500;
-    margin: 0 0 30px 0;
+/* poster */
 
-}
+.archive-poster{
 
-
-.archive-text p {
-
-    font-size: 14px;
-    line-height: 1.6;
-    margin-bottom: 14px;
+    width:32%;
 
 }
 
 
-.archive-text .english {
+.archive-poster img{
 
-    font-size: 13px;
-    line-height: 1.6;
+    width:100%;
+    height:auto;
+    display:block;
+
+}
+
+
+
+/* text */
+
+.archive-text{
+
+    width:45%;
+    max-width:420px;
 
 }
 
 
-.archive-text hr {
+.archive-text h1{
 
-    border: none;
-    border-top: 1px solid #333;
-    margin: 35px 0;
+    font-size:32px;
+    font-weight:500;
+    letter-spacing:3px;
+    margin-bottom:30px;
 
 }
 
+
+
+.archive-text p{
+
+    font-size:14px;
+    line-height:1.6;
+    margin-bottom:14px;
+
+}
+
+
+
+.archive-text .english{
+
+    font-size:13px;
+    line-height:1.6;
+
+}
+
+
+
+.archive-text hr{
+
+    border:none;
+    border-top:1px solid #333;
+    margin:35px 0;
+
+}
+
+
+
+/* mobile */
 
 @media (max-width:800px){
 
+
     .archive-page{
+
         padding:30px 20px;
+
     }
 
 
     .archive-detail{
+
         flex-direction:column;
         gap:40px;
+
     }
 
 
     .archive-poster,
     .archive-text{
+
         width:100%;
         max-width:none;
+
     }
 
+
+}
