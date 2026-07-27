@@ -535,6 +535,23 @@ h1{
     }
 
 
+    /* Festival mobile spacing */
+
+    .festival-container{
+
+        margin-top:150px;
+
+        padding:0 25px;
+
+    }
+
+
+    .festival-item h2{
+
+        font-size:26px;
+
+    }
+
 
     .archive-detail{
 
@@ -543,7 +560,6 @@ h1{
         gap:40px;
 
     }
-
 
 
     .archive-poster,
@@ -557,6 +573,7 @@ h1{
     }
 
 
+    /* Mobile Menu */
 
     .site-menu{
 
@@ -565,7 +582,6 @@ h1{
         right:30px;
 
     }
-
 
 
 }
