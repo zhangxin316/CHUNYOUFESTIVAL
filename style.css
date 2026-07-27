@@ -92,3 +92,113 @@ h1{
 .years a:hover{
     color:#fff;
 }
+/* Archive detail page */
+
+.archive-page {
+    min-height: 100vh;
+    background: #000;
+    color: #fff;
+    padding: 60px;
+}
+
+
+.archive-header {
+    font-size: 18px;
+    margin-bottom: 60px;
+}
+
+
+.archive-header a {
+    color: white;
+    text-decoration: none;
+}
+
+
+
+.archive-detail {
+
+    display: flex;
+    gap: 80px;
+    align-items: flex-start;
+
+}
+
+
+
+.archive-poster {
+
+    width: 45%;
+
+}
+
+
+
+.archive-poster img {
+
+    width: 100%;
+    height: auto;
+    display: block;
+
+}
+
+
+
+.archive-text {
+
+    width: 45%;
+    max-width: 500px;
+
+}
+
+
+
+.archive-text h1 {
+
+    font-size: 48px;
+    font-weight: 500;
+    margin: 0 0 35px 0;
+
+}
+
+
+
+.archive-text p {
+
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 18px;
+    font-weight: 400;
+
+}
+
+
+
+/* mobile */
+
+@media (max-width: 800px) {
+
+
+.archive-page {
+
+    padding: 30px;
+
+}
+
+
+.archive-detail {
+
+    flex-direction: column;
+    gap: 40px;
+
+}
+
+
+.archive-poster,
+.archive-text {
+
+    width: 100%;
+
+}
+
+
+}
