@@ -306,4 +306,32 @@ h1{
     border-color:#fff;
 
 }
+/* Site Menu */
 
+.site-menu {
+
+    position:absolute;
+    top:40px;
+    right:40px;
+
+}
+
+
+.site-menu a {
+
+    color:#888;
+    text-decoration:none;
+
+    font-size:14px;
+    letter-spacing:3px;
+
+    transition:0.3s;
+
+}
+
+
+.site-menu a:hover {
+
+    color:#fff;
+
+}
