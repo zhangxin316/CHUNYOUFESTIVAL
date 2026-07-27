@@ -200,27 +200,22 @@ h1{
 }
 
 
-.archive-page {
+@media (max-width:800px){
 
-    padding: 30px;
-
-}
-
-
-.archive-detail {
-
-    flex-direction: column;
-    gap: 40px;
-
-}
+    .archive-page{
+        padding:30px 20px;
+    }
 
 
-.archive-poster,
-.archive-text {
-
-    width: 100%;
-
-}
+    .archive-detail{
+        flex-direction:column;
+        gap:40px;
+    }
 
 
-}
+    .archive-poster,
+    .archive-text{
+        width:100%;
+        max-width:none;
+    }
+
