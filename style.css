@@ -241,7 +241,6 @@ h1{
 
 @media (max-width:800px){
 
-
     .archive-page{
 
         padding:30px 20px;
@@ -264,11 +263,6 @@ h1{
         max-width:none;
 
     }
-.archive-text hr {
-
-    border:none;
-    border-top:1px solid #333;
-    margin:35px 0;
 
 }
 
@@ -285,8 +279,11 @@ h1{
 .archive-gallery a {
 
     color:#888;
+
     text-decoration:none;
+
     font-size:14px;
+
     letter-spacing:2px;
 
     border:1px solid #444;
@@ -303,26 +300,36 @@ h1{
 .archive-gallery a:hover {
 
     color:#fff;
+
     border-color:#fff;
 
 }
+
+
+
 /* Site Menu */
 
 .site-menu {
 
     position:absolute;
+
     top:40px;
-    right:40px;
+
+    left:40px;
 
 }
 
 
 .site-menu a {
 
-    color:#888;
+    color:#fff;
+
     text-decoration:none;
 
-    font-size:14px;
+    font-size:18px;
+
+    font-weight:700;
+
     letter-spacing:3px;
 
     transition:0.3s;
@@ -330,8 +337,15 @@ h1{
 }
 
 
-.site-menu a:hover {
+.site-menu a:visited {
 
     color:#fff;
+
+}
+
+
+.site-menu a:hover {
+
+    color:#888;
 
 }
