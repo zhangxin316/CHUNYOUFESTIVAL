@@ -1,14 +1,11 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
   "name": "chunyoufestival",
-  "compatibility_date": "2026-08-20",
+  "compatibility_date": "2026-08-15",
+  "observability": {
+    "enabled": true
+  },
   "assets": {
-    "directory": ".",
-    "exclude": [
-      ".git/**",
-      ".github/**",
-      "node_modules/**",
-      "wrangler.jsonc"
-    ]
+    "directory": "."
   }
 }
