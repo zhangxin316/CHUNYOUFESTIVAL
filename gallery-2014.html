@@ -4,7 +4,6 @@
 <head>
 
 <meta charset="UTF-8">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>CHUNYOU ARCHIVE 2014</title>
@@ -13,109 +12,83 @@
 
 <style>
 
-/* =========================
-   Gallery Page
-   ========================= */
-
 .gallery-page{
-
-    padding:50px 40px 80px;
-
+    max-width:1200px;
+    margin:0 auto;
+    padding:60px 30px;
 }
-
 
 .gallery-header{
-
-    font-size:16px;
-
     margin-bottom:60px;
-
 }
-
 
 .gallery-header a{
-
-    color:#fff;
-
     text-decoration:none;
-
+    color:inherit;
 }
 
+.gallery-title{
+    text-align:center;
+    margin-bottom:60px;
+}
 
-/* =========================
-   Masonry Gallery
-   ========================= */
+.gallery-title h1{
+    font-size:32px;
+    font-weight:500;
+    letter-spacing:4px;
+    margin:0;
+}
 
 .gallery{
-
-    columns:3 280px;
-
-    column-gap:18px;
-
-    max-width:1400px;
-
-    margin:0 auto;
-
+    column-count:3;
+    column-gap:20px;
 }
-
 
 .gallery-item{
-
-    display:block;
-
-    width:100%;
-
-    margin-bottom:18px;
-
     break-inside:avoid;
-
+    margin-bottom:20px;
 }
-
 
 .gallery-item img{
-
-    width:100%;
-
-    height:auto;
-
     display:block;
-
+    width:100%;
+    height:auto;
 }
-
-
-/* =========================
-   Mobile
-   ========================= */
 
 @media(max-width:800px){
 
     .gallery-page{
-
-        padding:30px 15px 50px;
-
+        padding:30px 20px;
     }
-
 
     .gallery-header{
-
-        margin-bottom:40px;
-
+        margin-bottom:50px;
     }
 
+    .gallery-title{
+        margin-bottom:40px;
+    }
+
+    .gallery-title h1{
+        font-size:28px;
+        letter-spacing:3px;
+    }
 
     .gallery{
-
-        columns:2 150px;
-
-        column-gap:10px;
-
+        column-count:2;
+        column-gap:12px;
     }
 
-
     .gallery-item{
+        margin-bottom:12px;
+    }
 
-        margin-bottom:10px;
+}
 
+@media(max-width:500px){
+
+    .gallery{
+        column-count:1;
     }
 
 }
@@ -127,15 +100,21 @@
 
 <body>
 
-
 <main class="gallery-page">
 
 
     <div class="gallery-header">
 
         <a href="archive-2014.html">
-            CHUNYOU ARCHIVE / 2014
+            CHUNYOU ARCHIVE
         </a>
+
+    </div>
+
+
+    <div class="gallery-title">
+
+        <h1>2014</h1>
 
     </div>
 
@@ -164,7 +143,7 @@
         </div>
 
         <div class="gallery-item">
-            <img src="images/2014/6.JPG" alt="CHUNYOU 2014">
+            <img src="images/2014/6.jpg" alt="CHUNYOU 2014">
         </div>
 
         <div class="gallery-item">
@@ -232,7 +211,6 @@
 
 
 </main>
-
 
 </body>
 
