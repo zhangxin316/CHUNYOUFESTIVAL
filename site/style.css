@@ -242,22 +242,9 @@ h1{
 
 
 
-/* =========================
-   Archive media column
-   ========================= */
-
-
-.archive-media{
-
-    width:32%;
-
-}
-
-
-
 .archive-poster{
 
-    width:100%;
+    width:32%;
 
 }
 
@@ -267,109 +254,10 @@ h1{
 
     width:100%;
 
-    height:auto;
-
     display:block;
 
 }
 
-
-
-/* =========================
-   Gallery Button
-   ========================= */
-
-
-.archive-gallery{
-
-    margin-top:22px;
-
-}
-
-
-
-.archive-gallery a{
-
-    color:#888;
-
-    text-decoration:none;
-
-    border:1px solid #444;
-
-    padding:10px 20px;
-
-    font-size:14px;
-
-    letter-spacing:2px;
-
-    display:inline-block;
-
-    transition:0.25s;
-
-}
-
-
-
-.archive-gallery a:hover{
-
-    color:#fff;
-
-    border-color:#fff;
-
-}
-
-
-
-
-
-/* =========================
-   Documentary
-   ========================= */
-
-
-.archive-documentary{
-
-    margin-top:28px;
-
-}
-
-
-
-.archive-documentary-title{
-
-    font-size:13px;
-
-    font-weight:400;
-
-    letter-spacing:2px;
-
-    color:#aaa;
-
-    margin-bottom:12px;
-
-}
-
-
-
-.archive-documentary iframe{
-
-    width:100%;
-
-    aspect-ratio:16 / 9;
-
-    border:0;
-
-    display:block;
-
-}
-
-
-
-
-
-/* =========================
-   Archive text column
-   ========================= */
 
 
 .archive-text{
@@ -408,13 +296,46 @@ h1{
 
 
 
-.archive-text hr{
 
-    border:0;
 
-    border-top:1px solid rgba(255,255,255,0.25);
+/* =========================
+   Gallery Button
+   ========================= */
 
-    margin:30px 0;
+
+.archive-gallery{
+
+    margin-top:40px;
+
+}
+
+
+
+.archive-gallery a{
+
+    color:#888;
+
+    text-decoration:none;
+
+    border:1px solid #444;
+
+    padding:10px 20px;
+
+    font-size:14px;
+
+    letter-spacing:2px;
+
+    display:inline-block;
+
+}
+
+
+
+.archive-gallery a:hover{
+
+    color:#fff;
+
+    border-color:#fff;
 
 }
 
@@ -621,11 +542,6 @@ h1{
 
 
 
-    /* =========================
-       Archive mobile
-       ========================= */
-
-
     .archive-page{
 
         padding:30px 20px;
@@ -634,57 +550,8 @@ h1{
 
 
 
-    .archive-detail{
-
-        flex-direction:column;
-
-        gap:40px;
-
-    }
-
-
-
-    .archive-media,
-    .archive-text{
-
-        width:100%;
-
-        max-width:none;
-
-    }
-
-
-
-    .archive-gallery{
-
-        margin-top:18px;
-
-    }
-
-
-
-    .archive-documentary{
-
-        margin-top:24px;
-
-    }
-
-
-
-    .archive-text h1{
-
-        font-size:28px;
-
-        letter-spacing:4px;
-
-    }
-
-
-
-
-
     /* =========================
-       Festival mobile
+       Festival mobile spacing
        ========================= */
 
 
@@ -701,6 +568,32 @@ h1{
     .festival-item h2{
 
         font-size:26px;
+
+    }
+
+
+
+    /* =========================
+       Archive mobile
+       ========================= */
+
+
+    .archive-detail{
+
+        flex-direction:column;
+
+        gap:40px;
+
+    }
+
+
+
+    .archive-poster,
+    .archive-text{
+
+        width:100%;
+
+        max-width:none;
 
     }
 
@@ -727,6 +620,8 @@ h1{
 
 
 
+    /* MENU button */
+
     .site-menu > a{
 
         position:fixed;
@@ -748,6 +643,8 @@ h1{
     }
 
 
+
+    /* Fullscreen black menu */
 
     .menu-list{
 
