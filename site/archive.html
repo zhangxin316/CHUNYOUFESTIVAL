@@ -3,859 +3,503 @@
 
 <head>
 
-  <meta charset="UTF-8">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0"
-  >
+<title>CHUNYOU ARCHIVE</title>
 
-  <title>CHUNYOU ARCHIVE</title>
+<link rel="stylesheet" href="style.css">
 
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Noto+Sans+SC:wght@400;500&display=swap"
-    rel="stylesheet"
-  >
+<style>
 
-  <style>
+/* =========================
+   ARCHIVE
+========================= */
 
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+.archive {
 
+    min-height: 100vh;
 
-    html,
-    body {
-      min-height: 100%;
-      background: #000;
-    }
+    padding:
+        80px
+        40px
+        80px;
 
+}
 
-    body {
-      color: #fff;
 
-      font-family:
-        "Inter",
-        "Noto Sans SC",
-        Arial,
-        sans-serif;
+.archive h1 {
 
-      -webkit-font-smoothing: antialiased;
-    }
+    text-align: center;
 
+    font-size: 20px;
 
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
+    font-weight: 400;
 
+    letter-spacing: 2px;
 
+    margin-bottom: 60px;
 
-    /* =========================
-       MENU
-    ========================= */
+}
 
-    .site-menu {
 
-      position: fixed;
+/* =========================
+   YEARS
+========================= */
 
-      top: 38px;
-      right: 48px;
+.years {
 
-      z-index: 1000;
+    display: flex;
 
-      display: flex;
+    flex-direction: column;
 
-      flex-direction: column;
+    align-items: center;
 
-      align-items: flex-end;
+    gap: 18px;
 
-    }
+}
 
 
-    #menu-button {
+.year-item {
 
-      font-size: 13px;
+    position: relative;
 
-      letter-spacing: 0.08em;
+}
 
-      cursor: pointer;
 
-    }
+.year-item > a {
 
+    display: block;
 
-    .menu-list {
+    font-size: 16px;
 
-      display: none;
+    font-weight: 400;
 
-      flex-direction: column;
+    line-height: 1.4;
 
-      align-items: flex-end;
+    color: #fff;
 
-      gap: 9px;
+    text-decoration: none;
 
-      margin-top: 16px;
+    transition: opacity 0.2s ease;
 
-    }
+}
 
 
-    .menu-list a {
+.year-item > a:hover {
 
-      font-size: 14px;
+    opacity: 0.45;
 
-      transition: opacity 0.2s ease;
+}
 
-    }
 
 
-    .menu-list a:hover {
+/* =========================
+   POSTERS
+========================= */
 
-      opacity: 0.5;
+.year-poster {
 
-    }
+    position: fixed;
 
+    top: 50%;
 
+    right: 7vw;
 
-    /* =========================
-       ARCHIVE
-    ========================= */
+    transform:
+        translateY(-50%);
 
-    .archive-page {
+    width: 300px;
 
-      min-height: 100vh;
+    max-height: 72vh;
 
-      padding:
-        42px
-        50px
-        70px
-        50px;
+    object-fit: contain;
 
-    }
+    opacity: 0;
 
+    visibility: hidden;
 
-    .archive-title {
+    pointer-events: none;
 
-      font-size: 13px;
+    z-index: 20;
 
-      font-weight: 400;
+    transition:
+        opacity 0.25s ease;
 
-      letter-spacing: 0.08em;
+}
 
-      margin-bottom: 85px;
 
-    }
+.year-item:hover
+.year-poster {
 
+    opacity: 1;
 
+    visibility: visible;
 
-    .archive-layout {
+}
 
-      display: grid;
 
-      grid-template-columns:
-        minmax(300px, 1fr)
-        minmax(300px, 500px);
 
-      gap: 80px;
+/* =========================
+   MOBILE
+========================= */
 
-      align-items: start;
+@media (max-width: 800px) {
 
-      max-width: 1450px;
+    .archive {
+
+        padding:
+            80px
+            20px
+            60px;
 
     }
 
 
+    .archive h1 {
 
-    /* YEARS */
+        font-size: 18px;
+
+        margin-bottom: 50px;
+
+    }
+
 
     .years {
 
-      display: flex;
-
-      flex-direction: column;
+        gap: 17px;
 
     }
 
 
-    .year-link {
-
-      position: relative;
-
-      display: flex;
-
-      align-items: center;
-
-      justify-content: space-between;
-
-      min-height: 72px;
-
-      border-top:
-        1px solid
-        rgba(255,255,255,0.28);
-
-      transition:
-        opacity 0.2s ease;
-
-    }
-
-
-    .year-link:last-child {
-
-      border-bottom:
-        1px solid
-        rgba(255,255,255,0.28);
-
-    }
-
-
-    .year-link:hover {
-
-      opacity: 0.55;
-
-    }
-
-
-    .year-number {
-
-      font-size:
-        clamp(
-          34px,
-          4.2vw,
-          64px
-        );
-
-      font-weight: 400;
-
-      line-height: 1;
-
-      letter-spacing: -0.04em;
-
-    }
-
-
-    .year-arrow {
-
-      font-size: 18px;
-
-      opacity: 0;
-
-      transform:
-        translateX(-8px);
-
-      transition:
-        opacity 0.2s ease,
-        transform 0.2s ease;
-
-    }
-
-
-    .year-link:hover
-    .year-arrow {
-
-      opacity: 1;
-
-      transform:
-        translateX(0);
-
-    }
-
-
-
-    /* =========================
-       POSTER PREVIEW
-    ========================= */
-
-    .poster-preview {
-
-      position: sticky;
-
-      top: 80px;
-
-      width: 100%;
-
-      height:
-        calc(100vh - 140px);
-
-      display: flex;
-
-      align-items: center;
-
-      justify-content: center;
-
-    }
-
-
-    .poster-preview img {
-
-      max-width: 100%;
-
-      max-height: 100%;
-
-      width: auto;
-
-      height: auto;
-
-      display: block;
-
-      opacity: 0;
-
-      transform:
-        scale(0.985);
-
-      transition:
-        opacity 0.3s ease,
-        transform 0.3s ease;
-
-    }
-
-
-    .poster-preview img.visible {
-
-      opacity: 1;
-
-      transform:
-        scale(1);
-
-    }
-
-
-
-    /* =========================
-       MOBILE
-    ========================= */
-
-    @media (max-width: 800px) {
-
-
-      .site-menu {
-
-        top: 27px;
-        right: 20px;
-
-      }
-
-
-      .archive-page {
-
-        padding:
-          28px
-          20px
-          50px
-          20px;
-
-      }
-
-
-      .archive-title {
-
-        margin-bottom: 70px;
-
-        font-size: 12px;
-
-      }
-
-
-      .archive-layout {
-
-        display: block;
-
-      }
-
-
-      .poster-preview {
-
-        display: none;
-
-      }
-
-
-      .year-link {
-
-        min-height: 66px;
-
-      }
-
-
-      .year-number {
-
-        font-size: 38px;
-
-      }
-
-
-      .year-arrow {
-
-        opacity: 1;
-
-        transform: none;
+    .year-item > a {
 
         font-size: 16px;
 
-      }
-
     }
 
 
-  </style>
+    .year-poster {
+
+        display: none;
+
+    }
+
+}
+
+</style>
 
 </head>
-
 
 
 <body>
 
 
-  <nav class="site-menu">
+<nav class="site-menu">
 
     <a href="#" id="menu-button">
-      MENU
+        MENU
     </a>
 
 
     <div class="menu-list">
 
-      <a href="archive.html">
-        Archive
-      </a>
+        <a href="archive.html">
+            Archive
+        </a>
 
-      <a href="festival.html">
-        Festival
-      </a>
+        <a href="festival.html">
+            Festival
+        </a>
 
-      <a href="news.html">
-        News
-      </a>
+        <a href="news.html">
+            News
+        </a>
 
-      <a href="family.html">
-        Family
-      </a>
+        <a href="family.html">
+            Family
+        </a>
 
-      <a href="contact.html">
-        Contact
-      </a>
+        <a href="contact.html">
+            Contact
+        </a>
 
     </div>
 
-  </nav>
+</nav>
 
 
 
-  <main class="archive-page">
+<main class="archive">
 
 
-    <div class="archive-title">
-
-      <a href="index.html">
+    <h1>
         CHUNYOU ARCHIVE
-      </a>
+    </h1>
+
+
+    <div class="years">
+
+
+        <div class="year-item">
+
+            <a href="archive-2026.html">
+                2026
+            </a>
+
+            <img
+                class="year-poster"
+                src="images/2026/Poster.jpg"
+                alt="CHUNYOU 2026"
+            >
+
+        </div>
+
+
+
+        <div class="year-item">
+
+            <a href="archive-2025.html">
+                2025
+            </a>
+
+            <img
+                class="year-poster"
+                src="images/2025/Poster.jpg"
+                alt="CHUNYOU 2025"
+            >
+
+        </div>
+
+
+
+        <div class="year-item">
+
+            <a href="archive-2024.html">
+                2024
+            </a>
+
+            <img
+                class="year-poster"
+                src="images/2024/Poster.jpg"
+                alt="CHUNYOU 2024"
+            >
+
+        </div>
+
+
+
+        <div class="year-item">
+
+            <a href="archive-2023.html">
+                2023
+            </a>
+
+            <img
+                class="year-poster"
+                src="images/2023/Poster.jpg"
+                alt="CHUNYOU 2023"
+            >
+
+        </div>
+
+
+
+        <div class="year-item">
+
+            <a href="archive-2022.html">
+                2022
+            </a>
+
+            <img
+                class="year-poster"
+                src="images/2022/Poster.jpg"
+                alt="CHUNYOU 2022"
+            >
+
+        </div>
+
+
+
+        <div class="year-item">
+
+            <a href="archive-2021.html">
+                2021
+            </a>
+
+            <img
+                class="year-poster"
+                src="images/2021/Poster大.jpeg"
+                alt="CHUNYOU 2021"
+            >
+
+        </div>
+
+
+
+        <div class="year-item">
+
+            <a href="archive-2020.html">
+                2020
+            </a>
+
+            <img
+                class="year-poster"
+                src="images/2020/Poster.jpg"
+                alt="CHUNYOU 2020"
+            >
+
+        </div>
+
+
+
+        <div class="year-item">
+
+            <a href="archive-2019.html">
+                2019
+            </a>
+
+            <img
+                class="year-poster"
+                src="images/2019/Poster.jpg"
+                alt="CHUNYOU 2019"
+            >
+
+        </div>
+
+
+
+        <div class="year-item">
+
+            <a href="archive-2018.html">
+                2018
+            </a>
+
+            <img
+                class="year-poster"
+                src="images/2018/Poster.jpg"
+                alt="CHUNYOU 2018"
+            >
+
+        </div>
+
+
+
+        <div class="year-item">
+
+            <a href="archive-2017.html">
+                2017
+            </a>
+
+            <img
+                class="year-poster"
+                src="images/2017/Poster.jpg"
+                alt="CHUNYOU 2017"
+            >
+
+        </div>
+
+
+
+        <div class="year-item">
+
+            <a href="archive-2016.html">
+                2016
+            </a>
+
+            <img
+                class="year-poster"
+                src="images/2016/Poster.jpg"
+                alt="CHUNYOU 2016"
+            >
+
+        </div>
+
+
+
+        <div class="year-item">
+
+            <a href="archive-2015.html">
+                2015
+            </a>
+
+            <img
+                class="year-poster"
+                src="images/2015/Poster.jpg"
+                alt="CHUNYOU 2015"
+            >
+
+        </div>
+
+
+
+        <div class="year-item">
+
+            <a href="archive-2014.html">
+                2014
+            </a>
+
+            <img
+                class="year-poster"
+                src="images/2014/春游2014.jpg"
+                alt="CHUNYOU 2014"
+            >
+
+        </div>
+
+
+
+        <div class="year-item">
+
+            <a href="archive-2013.html">
+                2013
+            </a>
+
+            <img
+                class="year-poster"
+                src="images/2013/Poster.jpg"
+                alt="CHUNYOU 2013"
+            >
+
+        </div>
+
 
     </div>
 
 
+</main>
 
-    <div class="archive-layout">
 
 
-      <div class="years">
+<script>
 
+const menuButton =
+    document.getElementById("menu-button");
 
-        <a
-          href="archive-2026.html"
-          class="year-link"
-          data-poster="images/2026/Poster.jpg"
-        >
+const menuList =
+    document.querySelector(".menu-list");
 
-          <span class="year-number">
-            2026
-          </span>
 
-          <span class="year-arrow">
-            →
-          </span>
+menuButton.onclick = function(e) {
 
-        </a>
+    e.preventDefault();
 
 
+    if (
+        menuList.style.display === "flex"
+    ) {
 
-        <a
-          href="archive-2025.html"
-          class="year-link"
-          data-poster="images/2025/Poster.jpg"
-        >
+        menuList.style.display = "none";
 
-          <span class="year-number">
-            2025
-          </span>
+    } else {
 
-          <span class="year-arrow">
-            →
-          </span>
+        menuList.style.display = "flex";
 
-        </a>
+    }
 
+};
 
-
-        <a
-          href="archive-2024.html"
-          class="year-link"
-          data-poster="images/2024/Poster.jpg"
-        >
-
-          <span class="year-number">
-            2024
-          </span>
-
-          <span class="year-arrow">
-            →
-          </span>
-
-        </a>
-
-
-
-        <a
-          href="archive-2023.html"
-          class="year-link"
-          data-poster="images/2023/Poster.jpg"
-        >
-
-          <span class="year-number">
-            2023
-          </span>
-
-          <span class="year-arrow">
-            →
-          </span>
-
-        </a>
-
-
-
-        <a
-          href="archive-2022.html"
-          class="year-link"
-          data-poster="images/2022/Poster.jpg"
-        >
-
-          <span class="year-number">
-            2022
-          </span>
-
-          <span class="year-arrow">
-            →
-          </span>
-
-        </a>
-
-
-
-        <a
-          href="archive-2021.html"
-          class="year-link"
-          data-poster="images/2021/Poster大.jpeg"
-        >
-
-          <span class="year-number">
-            2021
-          </span>
-
-          <span class="year-arrow">
-            →
-          </span>
-
-        </a>
-
-
-
-        <a
-          href="archive-2020.html"
-          class="year-link"
-          data-poster="images/2020/Poster.jpg"
-        >
-
-          <span class="year-number">
-            2020
-          </span>
-
-          <span class="year-arrow">
-            →
-          </span>
-
-        </a>
-
-
-
-        <a
-          href="archive-2019.html"
-          class="year-link"
-          data-poster="images/2019/Poster.jpg"
-        >
-
-          <span class="year-number">
-            2019
-          </span>
-
-          <span class="year-arrow">
-            →
-          </span>
-
-        </a>
-
-
-
-        <a
-          href="archive-2018.html"
-          class="year-link"
-          data-poster="images/2018/Poster.jpg"
-        >
-
-          <span class="year-number">
-            2018
-          </span>
-
-          <span class="year-arrow">
-            →
-          </span>
-
-        </a>
-
-
-
-        <a
-          href="archive-2017.html"
-          class="year-link"
-          data-poster="images/2017/Poster.jpg"
-        >
-
-          <span class="year-number">
-            2017
-          </span>
-
-          <span class="year-arrow">
-            →
-          </span>
-
-        </a>
-
-
-
-        <a
-          href="archive-2016.html"
-          class="year-link"
-          data-poster="images/2016/Poster.jpg"
-        >
-
-          <span class="year-number">
-            2016
-          </span>
-
-          <span class="year-arrow">
-            →
-          </span>
-
-        </a>
-
-
-
-        <a
-          href="archive-2015.html"
-          class="year-link"
-          data-poster="images/2015/Poster.jpg"
-        >
-
-          <span class="year-number">
-            2015
-          </span>
-
-          <span class="year-arrow">
-            →
-          </span>
-
-        </a>
-
-
-
-        <a
-          href="archive-2014.html"
-          class="year-link"
-          data-poster="images/2014/春游2014.jpg"
-        >
-
-          <span class="year-number">
-            2014
-          </span>
-
-          <span class="year-arrow">
-            →
-          </span>
-
-        </a>
-
-
-
-        <a
-          href="archive-2013.html"
-          class="year-link"
-          data-poster="images/2013/Poster.jpg"
-        >
-
-          <span class="year-number">
-            2013
-          </span>
-
-          <span class="year-arrow">
-            →
-          </span>
-
-        </a>
-
-
-      </div>
-
-
-
-      <div class="poster-preview">
-
-        <img
-          id="posterImage"
-          src=""
-          alt="CHUNYOU ARCHIVE POSTER"
-        >
-
-      </div>
-
-
-    </div>
-
-
-  </main>
-
-
-
-  <script>
-
-
-    /* MENU */
-
-    const menuButton =
-      document.getElementById(
-        "menu-button"
-      );
-
-    const menuList =
-      document.querySelector(
-        ".menu-list"
-      );
-
-
-    menuButton.onclick =
-      function(e) {
-
-        e.preventDefault();
-
-
-        if (
-          menuList.style.display
-          ===
-          "flex"
-        ) {
-
-          menuList.style.display
-            =
-            "none";
-
-        } else {
-
-          menuList.style.display
-            =
-            "flex";
-
-        }
-
-      };
-
-
-
-    /* POSTER HOVER */
-
-    const yearLinks =
-      document.querySelectorAll(
-        ".year-link"
-      );
-
-    const posterImage =
-      document.getElementById(
-        "posterImage"
-      );
-
-
-    yearLinks.forEach(
-
-      function(link) {
-
-
-        link.addEventListener(
-
-          "mouseenter",
-
-          function() {
-
-
-            if (
-              window.innerWidth
-              <=
-              800
-            ) {
-
-              return;
-
-            }
-
-
-            const poster =
-              link.getAttribute(
-                "data-poster"
-              );
-
-
-            posterImage.classList
-              .remove(
-                "visible"
-              );
-
-
-            setTimeout(
-
-              function() {
-
-                posterImage.src
-                  =
-                  poster;
-
-                posterImage
-                  .classList
-                  .add(
-                    "visible"
-                  );
-
-              },
-
-              100
-
-            );
-
-          }
-
-        );
-
-
-      }
-
-    );
-
-
-  </script>
+</script>
 
 
 </body>
