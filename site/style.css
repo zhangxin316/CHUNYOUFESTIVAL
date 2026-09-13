@@ -388,7 +388,9 @@ h1{
 
 
 
-/* Menu dropdown */
+/* =========================
+   Menu dropdown
+   ========================= */
 
 
 .menu-list{
@@ -483,10 +485,8 @@ h1{
     overflow:hidden;
 
     transition:
-
-    opacity 0.6s ease,
-
-    max-height 0.8s ease;
+        opacity 0.6s ease,
+        max-height 0.8s ease;
 
 }
 
@@ -526,12 +526,21 @@ h1{
 
 
 @media(max-width:800px){
+
+
     h1{
+
         width:100%;
+
         text-align:center;
+
         font-size:28px;
+
         letter-spacing:3px;
+
     }
+
+
 
     .archive-page{
 
@@ -540,7 +549,11 @@ h1{
     }
 
 
-    /* Festival mobile spacing */
+
+    /* =========================
+       Festival mobile spacing
+       ========================= */
+
 
     .festival-container{
 
@@ -551,11 +564,13 @@ h1{
     }
 
 
+
     .festival-item h2{
 
         font-size:26px;
 
     }
+
 
 
     .archive-detail{
@@ -567,8 +582,8 @@ h1{
     }
 
 
-    .archive-poster,
 
+    .archive-poster,
     .archive-text{
 
         width:100%;
@@ -578,13 +593,108 @@ h1{
     }
 
 
-    /* Mobile Menu */
+
+
+
+    /* =========================
+       Mobile Fullscreen Menu
+       ========================= */
+
 
     .site-menu{
 
+        position:fixed;
+
+        top:0;
+
+        right:0;
+
+        z-index:9999;
+
+    }
+
+
+
+    /* MENU button */
+
+    .site-menu > a{
+
+        position:fixed;
+
         top:30px;
 
-        right:30px;
+        right:24px;
+
+        z-index:10001;
+
+        font-size:24px;
+
+        font-weight:700;
+
+        letter-spacing:5px;
+
+        color:#fff;
+
+    }
+
+
+
+    /* Full screen black layer */
+
+    .menu-list{
+
+        position:fixed;
+
+        top:0;
+
+        left:0;
+
+        width:100vw;
+
+        height:100vh;
+        height:100svh;
+
+        margin:0;
+
+        padding:0;
+
+        background:#000;
+
+        flex-direction:column;
+
+        justify-content:center;
+
+        align-items:center;
+
+        gap:28px;
+
+        z-index:10000;
+
+    }
+
+
+
+    .menu-list a{
+
+        color:#fff;
+
+        text-decoration:none;
+
+        font-size:24px;
+
+        font-weight:400;
+
+        line-height:1.2;
+
+        letter-spacing:3px;
+
+    }
+
+
+
+    .menu-list a:hover{
+
+        color:#888;
 
     }
 
