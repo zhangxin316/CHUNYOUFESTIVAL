@@ -3,111 +3,300 @@
 
 <head>
 
-<meta charset="UTF-8" />
+<meta charset="UTF-8">
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Festival | CHUNYOU</title>
+<title>Festival | CHUNYOU FESTIVAL</title>
 
+<meta
+  name="description"
+  content="CHUNYOU FESTIVAL was founded in Chengdu in 2013. A festival about music, people, meeting and spending spring together."
+>
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+<link
+  href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Noto+Sans+SC:wght@400;500;700&display=swap"
+  rel="stylesheet"
+>
 
-
-<link rel="stylesheet" href="style.css" />
+<link rel="stylesheet" href="style.css">
 
 
 <style>
 
+/* =========================
+   FESTIVAL PAGE
+========================= */
 
 .festival-container {
 
-  max-width:900px;
+  max-width: 900px;
 
-  margin:120px auto;
+  margin: 0 auto;
 
-  text-align:center;
+  padding:
+    140px
+    40px
+    120px;
 
 }
 
 
+/* =========================
+   ITEM
+========================= */
 
 .festival-item {
 
-  margin-bottom:80px;
+  text-align: center;
+
+  margin-bottom: 100px;
 
 }
 
 
+.festival-item:last-child {
 
-.festival-item h2 {
-
-  font-size:32px;
-
-  font-weight:500;
-
-  line-height:1.4;
-
-  margin:0;
-
-  cursor:default;
+  margin-bottom: 0;
 
 }
 
 
+/* =========================
+   TITLE
+========================= */
+
+.festival-title {
+
+  display: inline-block;
+
+  margin: 0;
+
+  font-size: 30px;
+
+  font-weight: 500;
+
+  line-height: 1.45;
+
+  letter-spacing: 0.5px;
+
+  cursor: pointer;
+
+  transition:
+    opacity 0.25s ease;
+
+}
+
+
+.festival-title:hover {
+
+  opacity: 0.5;
+
+}
+
+
+.festival-title .cn {
+
+  font-size: 18px;
+
+  font-weight: 400;
+
+  letter-spacing: 1px;
+
+}
+
+
+/* =========================
+   CONTENT
+========================= */
 
 .content {
 
-  max-width:720px;
+  max-width: 700px;
 
-  margin:35px auto 0;
+  margin:
+    0
+    auto;
 
-  text-align:left;
+  text-align: left;
 
-  line-height:1.6;
+  font-size: 16px;
 
-  opacity:0;
+  line-height: 1.85;
 
-  max-height:0;
+  opacity: 0;
 
-  overflow:hidden;
+  max-height: 0;
+
+  overflow: hidden;
+
+  transform: translateY(-8px);
 
   transition:
-  opacity 0.6s ease,
-  max-height 0.8s ease;
+    opacity 0.5s ease,
+    max-height 0.7s ease,
+    transform 0.5s ease,
+    margin 0.5s ease;
 
 }
 
 
+/* desktop hover */
 
-.festival-item:hover .content {
+@media (hover:hover) {
 
-  opacity:1;
+  .festival-item:hover .content {
 
-  max-height:1000px;
+    opacity: 1;
+
+    max-height: 1600px;
+
+    transform: translateY(0);
+
+    margin-top: 38px;
+
+  }
 
 }
 
 
+/* click / mobile */
+
+.festival-item.open .content {
+
+  opacity: 1;
+
+  max-height: 1600px;
+
+  transform: translateY(0);
+
+  margin-top: 38px;
+
+}
+
+
+/* =========================
+   TEXT
+========================= */
 
 .content p {
 
-  margin-bottom:18px;
+  margin:
+    0
+    0
+    22px;
 
 }
 
+
+.content p:last-of-type {
+
+  margin-bottom: 0;
+
+}
+
+
+.content hr {
+
+  border: 0;
+
+  border-top:
+    1px
+    solid
+    rgba(255,255,255,0.35);
+
+  margin:
+    36px
+    0;
+
+}
 
 
 .content a {
 
-  display:inline-block;
+  display: inline-block;
 
-  margin-top:20px;
+  margin-top: 36px;
+
+  color: #fff;
+
+  text-decoration: none;
+
+  border-bottom:
+    1px
+    solid
+    rgba(255,255,255,0.6);
+
+  padding-bottom: 3px;
+
+  transition:
+    opacity 0.2s ease;
 
 }
 
 
-</style>
+.content a:hover {
 
+  opacity: 0.45;
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width:800px) {
+
+  .festival-container {
+
+    padding:
+      120px
+      24px
+      80px;
+
+  }
+
+
+  .festival-item {
+
+    margin-bottom: 80px;
+
+  }
+
+
+  .festival-title {
+
+    font-size: 26px;
+
+  }
+
+
+  .festival-title .cn {
+
+    font-size: 17px;
+
+  }
+
+
+  .content {
+
+    font-size: 15px;
+
+    line-height: 1.8;
+
+  }
+
+
+  .festival-item.open .content {
+
+    margin-top: 32px;
+
+  }
+
+}
+
+</style>
 
 </head>
 
@@ -119,29 +308,35 @@
 
 <nav class="site-menu">
 
+  <a href="#" id="menu-button">
+    MENU
+  </a>
 
-<a href="#" id="menu-button">MENU</a>
+  <div class="menu-list">
 
+    <a href="archive.html">
+      Archive
+    </a>
 
-<div class="menu-list">
+    <a href="festival.html">
+      Festival
+    </a>
 
+    <a href="news.html">
+      News
+    </a>
 
-<a href="archive.html">Archive</a>
+    <a href="family.html">
+      Family
+    </a>
 
-<a href="festival.html">Festival</a>
+    <a href="contact.html">
+      Contact
+    </a>
 
-<a href="news.html">News</a>
-
-<a href="family.html">Family</a>
-
-<a href="contact.html">Contact</a>
-
-
-</div>
-
+  </div>
 
 </nav>
-
 
 
 
@@ -150,60 +345,88 @@
 
 
 
-
+<!-- =========================
+     ABOUT
+========================= -->
 
 <section class="festival-item">
 
+  <h2 class="festival-title">
 
-<h2>
+    About CHUNYOU
 
-About CHUNYOU
+    <br>
 
-<br>
+    <span class="cn">
+      关于春游
+    </span>
 
-关于春游
-
-</h2>
-
-
-
-<div class="content">
+  </h2>
 
 
-<p>
-春游（CHUNYOU FESTIVAL）创立于2013年，是一个以独立音乐和青年文化为核心的文化节。
-</p>
+  <div class="content">
+
+    <div class="chinese">
+
+      <p>
+        春游创立于2013年的成都。
+      </p>
+
+      <p>
+        一开始，它只是一些朋友在春天里的聚会。我们搭起简单的舞台，找来喜欢的乐队和DJ，朋友带着朋友来到这里。没有人真的知道它以后会变成什么。
+      </p>
+
+      <p>
+        后来，春游慢慢变大了。舞台变多了，来到这里的人也越来越多。音乐、艺术、食物、酒、树林、湖边、帐篷和那些没有被安排好的事情，一起构成了现在的春游。
+      </p>
+
+      <p>
+        但有一件事情一直没有改变。
+      </p>
+
+      <p>
+        我们仍然希望春游首先是一个让人见面的地方。
+      </p>
+
+      <p>
+        见朋友，认识陌生人，晒太阳，听音乐，浪费一点时间，然后一起度过春天里的两天。
+      </p>
+
+    </div>
 
 
-<p>
-从最初的音乐现场出发，春游持续探索音乐、艺术与城市生活之间的连接，为年轻创作者提供表达、交流与成长的平台。
-</p>
+    <hr>
 
 
-<p>
-多年来，春游逐渐成为一个汇聚音乐人、艺术家与观众的文化现场，并持续推动独立文化的发展。
-</p>
+    <div class="english">
 
+      <p>
+        CHUNYOU was founded in Chengdu in 2013.
+      </p>
 
+      <p>
+        In the beginning, it was simply a gathering of friends in spring. We built a few simple stages, invited bands and DJs we loved, and friends brought more friends. No one really knew what it would become.
+      </p>
 
-<p>
-Founded in 2013, CHUNYOU FESTIVAL is a cultural festival centered on independent music and youth culture.
-</p>
+      <p>
+        Over the years, CHUNYOU gradually grew. More stages appeared, and more people began to come. Music, art, food, drinks, trees, the lakeside, tents, and all the things that were never part of the schedule slowly became CHUNYOU as we know it today.
+      </p>
 
+      <p>
+        But one thing has never really changed.
+      </p>
 
-<p>
-Starting from live music experiences, CHUNYOU continues to explore the relationship between music, art, and urban life, creating a platform for young creators to express, connect, and grow.
-</p>
+      <p>
+        We still want CHUNYOU to be, first of all, a place for people to meet.
+      </p>
 
+      <p>
+        To see friends, meet strangers, lie in the sun, listen to music, waste a little time, and spend two days together in spring.
+      </p>
 
-<p>
-Over the years, CHUNYOU has become a cultural gathering place for musicians, artists, and audiences, while continuing to support the development of independent culture.
-</p>
+    </div>
 
-
-
-</div>
-
+  </div>
 
 </section>
 
@@ -211,50 +434,72 @@ Over the years, CHUNYOU has become a cultural gathering place for musicians, art
 
 
 
-
+<!-- =========================
+     ORGANIZER
+========================= -->
 
 <section class="festival-item">
 
+  <h2 class="festival-title">
 
-<h2>
+    Organizer
 
-Organizer
+    <br>
 
-<br>
+    <span class="cn">
+      主办方
+    </span>
 
-主办方
-
-</h2>
-
-
-
-<div class="content">
+  </h2>
 
 
-<p>
-“Morning Chengdu” 于2009年在成都成立，致力于支持独立原创音乐，并为青年艺术家创造更多表达与发展的机会。
-</p>
+  <div class="content">
+
+    <div class="chinese">
+
+      <p>
+        Morning Chengdu / 早上好，于2009年在成都开始。
+      </p>
+
+      <p>
+        在春游出现以前，我们已经在做演出、派对和各种与音乐有关的事情。很多时候没有完整的计划，只是因为喜欢一些音乐，也希望这些声音可以在成都发生。
+      </p>
+
+      <p>
+        春游就是从这样的关系里慢慢长出来的。
+      </p>
+
+      <p>
+        今天，早上好依然是春游的主办方。但比起一家传统意义上的演出公司，我们更愿意把它理解成一个持续组织事情、连接人，并让新的事情发生的平台。
+      </p>
+
+    </div>
 
 
-<p>
-通过音乐项目、现场演出以及文化实践，持续推动年轻创作者之间的交流，激发创造力，并与社区建立长期连接。
-</p>
+    <hr>
 
 
+    <div class="english">
 
-<p>
-Founded in Chengdu in 2009, MorningChengdu is dedicated to supporting independent original music and creating opportunities for young artists.
-</p>
+      <p>
+        Morning Chengdu began in Chengdu in 2009.
+      </p>
 
+      <p>
+        Before CHUNYOU existed, we were already organizing live shows, parties, and different kinds of music projects. There was rarely a perfect plan. Most of the time, we simply loved certain music and wanted to make space for those sounds to happen in Chengdu.
+      </p>
 
-<p>
-Through music projects, live performances, and cultural practices, MorningChengdu encourages young creators to express themselves, develop their creativity, and build connections with communities.
-</p>
+      <p>
+        CHUNYOU slowly grew out of those relationships.
+      </p>
 
+      <p>
+        Today, Morning Chengdu remains the organizer of CHUNYOU. But rather than thinking of it as a conventional events company, we see it as a platform for bringing people together, organizing things, and allowing new ideas to happen.
+      </p>
 
+    </div>
 
-</div>
-
+  </div>
 
 </section>
 
@@ -262,60 +507,87 @@ Through music projects, live performances, and cultural practices, MorningChengd
 
 
 
-
-
+<!-- =========================
+     NETWORK
+========================= -->
 
 <section class="festival-item">
 
+  <h2 class="festival-title">
 
-<h2>
+    Network
 
-Network
+    <br>
 
-<br>
+    <span class="cn">
+      网络
+    </span>
 
-网络
-
-</h2>
-
-
-
-<div class="content">
+  </h2>
 
 
-<p>
-自2013年以来，春游逐渐建立起一个连接音乐人、艺术家、空间、机构以及参与者的文化网络。
-</p>
+  <div class="content">
+
+    <div class="chinese">
+
+      <p>
+        春游从来不是一个人完成的。
+      </p>
+
+      <p>
+        从2013年开始，越来越多音乐人、艺术家、朋友、空间、厂牌、主办方、品牌和参与者进入春游，也有人从观众变成了朋友，再从朋友变成合作者。
+      </p>
+
+      <p>
+        有些关系只发生了一次，有些已经持续了很多年。
+      </p>
+
+      <p>
+        对我们来说，这些关系本身就是春游很重要的一部分。
+      </p>
+
+      <p>
+        春游不是只有舞台上的人。它也是所有曾经帮助它发生、参与其中，或者只是来到这里度过一个周末的人。
+      </p>
+
+    </div>
 
 
-<p>
-通过多年的合作与交流，这些关系成为春游持续发展的重要基础，也构成了春游文化生态的一部分。
-</p>
+    <hr>
 
 
+    <div class="english">
 
-<p>
-Since 2013, CHUNYOU has been building a cultural network that connects musicians, artists, creative spaces, organizations, and communities.
-</p>
+      <p>
+        CHUNYOU has never been made by one person.
+      </p>
+
+      <p>
+        Since 2013, more and more musicians, artists, friends, spaces, labels, organizers, brands, and participants have become part of it. Some people first came as audience members, then became friends, and eventually collaborators.
+      </p>
+
+      <p>
+        Some relationships lasted for only one moment. Others have continued for many years.
+      </p>
+
+      <p>
+        For us, these relationships are an important part of what CHUNYOU is.
+      </p>
+
+      <p>
+        CHUNYOU is not only the people standing on the stages. It is also everyone who has helped make it happen, taken part in it, or simply spent a weekend here with us.
+      </p>
+
+    </div>
 
 
-<p>
-Through years of collaboration and exchange, these connections have become an essential part of CHUNYOU’s development and cultural identity.
-</p>
+    <a href="family.html">
+      CHUNYOU FAMILY →
+    </a>
 
-
-
-<a href="family.html">
-Explore CHUNYOU Family →
-</a>
-
-
-</div>
-
+  </div>
 
 </section>
-
-
 
 
 
@@ -327,44 +599,63 @@ Explore CHUNYOU Family →
 
 <script>
 
+/* =========================
+   MENU
+========================= */
 
-const menuButton = document.getElementById("menu-button");
+const menuButton =
+  document.getElementById("menu-button");
 
-const menuList = document.querySelector(".menu-list");
-
-
-
-menuButton.onclick = function(e){
-
-
-    e.preventDefault();
+const menuList =
+  document.querySelector(".menu-list");
 
 
+menuButton.onclick = function(e) {
 
-    if(menuList.style.display === "flex"){
+  e.preventDefault();
+
+  if (
+    menuList.style.display === "flex"
+  ) {
+
+    menuList.style.display = "none";
+
+  } else {
+
+    menuList.style.display = "flex";
+
+  }
+
+};
 
 
-        menuList.style.display = "none";
+
+/* =========================
+   FESTIVAL ITEMS
+========================= */
+
+const festivalItems =
+  document.querySelectorAll(".festival-item");
 
 
-    }else{
+festivalItems.forEach(function(item) {
+
+  const title =
+    item.querySelector(".festival-title");
 
 
-        menuList.style.display = "flex";
+  title.addEventListener("click", function() {
 
+    item.classList.toggle("open");
 
-    }
+  });
 
-
-}
-
-
+});
 
 </script>
 
 
 
 </body>
-
 
 </html>
