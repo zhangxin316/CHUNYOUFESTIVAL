@@ -18,13 +18,30 @@
   <style>
 
     /* =========================
+       LEFT COLUMN
+    ========================= */
+
+    .archive-left {
+
+      width: 32%;
+
+    }
+
+
+    .archive-left .archive-poster {
+
+      width: 100%;
+
+    }
+
+
+    /* =========================
        DOCUMENTARY
     ========================= */
 
     .archive-film {
 
-      margin-top: 70px;
-      margin-bottom: 50px;
+      margin-top: 28px;
 
     }
 
@@ -71,10 +88,18 @@
 
     @media (max-width: 800px) {
 
+      .archive-left {
+
+        width: 100%;
+
+        max-width: none;
+
+      }
+
+
       .archive-film {
 
-        margin-top: 50px;
-        margin-bottom: 40px;
+        margin-top: 24px;
 
       }
 
@@ -116,14 +141,60 @@
     <section class="archive-detail">
 
 
-      <!-- POSTER -->
+      <!-- LEFT : POSTER + DOCUMENTARY -->
 
-      <div class="archive-poster">
+      <div class="archive-left">
 
-        <img
-          src="images/2024/Poster.jpg"
-          alt="CHUNYOU 2024"
-        >
+
+        <!-- POSTER -->
+
+        <div class="archive-poster">
+
+          <img
+            src="images/2024/Poster.jpg"
+            alt="CHUNYOU 2024"
+          >
+
+        </div>
+
+
+
+        <!-- DOCUMENTARY -->
+
+        <section class="archive-film">
+
+
+          <div class="film-label">
+
+            DOCUMENTARY / 纪录片
+
+          </div>
+
+
+          <div class="film-video">
+
+            <iframe
+              src="https://www.youtube.com/embed/0O9UDQKpH_c"
+              title="CHUNYOU 2024 Documentary"
+              loading="lazy"
+              allow="
+                accelerometer;
+                autoplay;
+                clipboard-write;
+                encrypted-media;
+                gyroscope;
+                picture-in-picture;
+                web-share
+              "
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen
+            ></iframe>
+
+          </div>
+
+
+        </section>
+
 
       </div>
 
@@ -197,44 +268,6 @@
           </p>
 
         </div>
-
-
-
-        <!-- DOCUMENTARY -->
-
-        <section class="archive-film">
-
-
-          <div class="film-label">
-
-            DOCUMENTARY / 纪录片
-
-          </div>
-
-
-          <div class="film-video">
-
-            <iframe
-              src="https://www.youtube.com/embed/0O9UDQKpH_c"
-              title="CHUNYOU 2024 Documentary"
-              loading="lazy"
-              allow="
-                accelerometer;
-                autoplay;
-                clipboard-write;
-                encrypted-media;
-                gyroscope;
-                picture-in-picture;
-                web-share
-              "
-              referrerpolicy="strict-origin-when-cross-origin"
-              allowfullscreen
-            ></iframe>
-
-          </div>
-
-
-        </section>
 
 
 
