@@ -13,90 +13,79 @@
 <link rel="stylesheet" href="style.css">
 
 <style>
+
 .gallery-page {
-
-min-height:100vh;
-
-padding:50px 40px;
-
+    min-height: 100vh;
+    padding: 50px 40px;
 }
 
 .gallery-header {
-
-font-size:16px;
-
-margin-bottom:50px;
-
+    font-size: 16px;
+    margin-bottom: 50px;
 }
 
 .gallery-header a {
-
-color:#fff;
-
-text-decoration:none;
-
+    color: #fff;
+    text-decoration: none;
 }
 
 .gallery-title {
-
-text-align:center;
-
-font-size:32px;
-
-font-weight:500;
-
-letter-spacing:5px;
-
-margin-bottom:60px;
-
+    text-align: center;
+    font-size: 32px;
+    font-weight: 500;
+    letter-spacing: 5px;
+    margin-bottom: 60px;
 }
 
+
+/* =========================
+   MASONRY
+========================= */
+
 .gallery-grid {
+    max-width: 1200px;
+    margin: 0 auto;
 
-max-width:1200px;
-
-margin:0 auto;
-
-display:grid;
-
-grid-template-columns:repeat(3, 1fr);
-
-gap:20px;
-
+    column-count: 3;
+    column-gap: 20px;
 }
 
 .gallery-grid img {
+    width: 100%;
+    height: auto;
 
-width:100%;
+    display: block;
 
-height:auto;
+    margin-bottom: 20px;
 
-display:block;
-
+    break-inside: avoid;
+    -webkit-column-break-inside: avoid;
 }
+
+
+/* =========================
+   MOBILE
+========================= */
 
 @media(max-width:800px){
-.gallery-page {
 
-padding:30px 20px;
+    .gallery-page {
+        padding: 30px 20px;
+    }
 
-}
+    .gallery-title {
+        font-size: 26px;
+        margin-bottom: 40px;
+    }
 
-.gallery-title {
+    .gallery-grid {
+        column-count: 1;
+        column-gap: 0;
+    }
 
-font-size:26px;
-
-margin-bottom:40px;
-
-}
-
-.gallery-grid {
-
-grid-template-columns:1fr;
-
-gap:15px;
-
-}
+    .gallery-grid img {
+        margin-bottom: 15px;
+    }
 
 }
 
@@ -108,75 +97,45 @@ gap:15px;
 
 <main class="gallery-page">
 
-<div class="gallery-header">
+    <div class="gallery-header">
+        <a href="archive-2018.html">CHUNYOU ARCHIVE / 2018</a>
+    </div>
 
-<a href="archive-2018.html">CHUNYOU ARCHIVE / 2018</a>
+    <h1 class="gallery-title">
+        GALLERY
+    </h1>
 
-</div>
+    <div class="gallery-grid">
 
-<h1 class="gallery-title">
+        <img src="images/2018/1.jpg" alt="CHUNYOU 2018">
+        <img src="images/2018/2.jpg" alt="CHUNYOU 2018">
+        <img src="images/2018/3.jpg" alt="CHUNYOU 2018">
+        <img src="images/2018/4.jpg" alt="CHUNYOU 2018">
+        <img src="images/2018/5.jpg" alt="CHUNYOU 2018">
+        <img src="images/2018/6.jpg" alt="CHUNYOU 2018">
+        <img src="images/2018/7.jpg" alt="CHUNYOU 2018">
+        <img src="images/2018/8.jpg" alt="CHUNYOU 2018">
+        <img src="images/2018/9.jpg" alt="CHUNYOU 2018">
+        <img src="images/2018/10.jpg" alt="CHUNYOU 2018">
+        <img src="images/2018/11.jpg" alt="CHUNYOU 2018">
+        <img src="images/2018/12.jpg" alt="CHUNYOU 2018">
+        <img src="images/2018/13.jpg" alt="CHUNYOU 2018">
+        <img src="images/2018/14.jpg" alt="CHUNYOU 2018">
+        <img src="images/2018/15.jpg" alt="CHUNYOU 2018">
+        <img src="images/2018/16.jpg" alt="CHUNYOU 2018">
+        <img src="images/2018/17.jpg" alt="CHUNYOU 2018">
+        <img src="images/2018/18.jpg" alt="CHUNYOU 2018">
+        <img src="images/2018/19.jpg" alt="CHUNYOU 2018">
+        <img src="images/2018/20.jpg" alt="CHUNYOU 2018">
+        <img src="images/2018/21.jpg" alt="CHUNYOU 2018">
+        <img src="images/2018/22.jpg" alt="CHUNYOU 2018">
+        <img src="images/2018/23.jpg" alt="CHUNYOU 2018">
+        <img src="images/2018/24.jpg" alt="CHUNYOU 2018">
+        <img src="images/2018/25.jpeg" alt="CHUNYOU 2018">
+        <img src="images/2018/26.jpeg" alt="CHUNYOU 2018">
+        <img src="images/2018/27.jpeg" alt="CHUNYOU 2018">
 
-GALLERY
-
-</h1>
-
-<div class="gallery-grid">
-
-<img src="images/2018/1.jpg" alt="CHUNYOU 2018">
-
-<img src="images/2018/2.jpg" alt="CHUNYOU 2018">
-
-<img src="images/2018/3.jpg" alt="CHUNYOU 2018">
-
-<img src="images/2018/4.jpg" alt="CHUNYOU 2018">
-
-<img src="images/2018/5.jpg" alt="CHUNYOU 2018">
-
-<img src="images/2018/6.jpg" alt="CHUNYOU 2018">
-
-<img src="images/2018/7.jpg" alt="CHUNYOU 2018">
-
-<img src="images/2018/8.jpg" alt="CHUNYOU 2018">
-
-<img src="images/2018/9.jpg" alt="CHUNYOU 2018">
-
-<img src="images/2018/10.jpg" alt="CHUNYOU 2018">
-
-<img src="images/2018/11.jpg" alt="CHUNYOU 2018">
-
-<img src="images/2018/12.jpg" alt="CHUNYOU 2018">
-
-<img src="images/2018/13.jpg" alt="CHUNYOU 2018">
-
-<img src="images/2018/14.jpg" alt="CHUNYOU 2018">
-
-<img src="images/2018/15.jpg" alt="CHUNYOU 2018">
-
-<img src="images/2018/16.jpg" alt="CHUNYOU 2018">
-
-<img src="images/2018/17.jpg" alt="CHUNYOU 2018">
-
-<img src="images/2018/18.jpg" alt="CHUNYOU 2018">
-
-<img src="images/2018/19.jpg" alt="CHUNYOU 2018">
-
-<img src="images/2018/20.jpg" alt="CHUNYOU 2018">
-
-<img src="images/2018/21.jpg" alt="CHUNYOU 2018">
-
-<img src="images/2018/22.jpg" alt="CHUNYOU 2018">
-
-<img src="images/2018/23.jpg" alt="CHUNYOU 2018">
-
-<img src="images/2018/24.jpg" alt="CHUNYOU 2018">
-
-<img src="images/2018/25.jpeg" alt="CHUNYOU 2018">
-
-<img src="images/2018/26.jpeg" alt="CHUNYOU 2018">
-
-<img src="images/2018/27.jpeg" alt="CHUNYOU 2018">
-
-</div>
+    </div>
 
 </main>
 
