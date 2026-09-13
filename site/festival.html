@@ -85,15 +85,10 @@
 
   cursor: pointer;
 
+  opacity: 1;
+
   transition:
     opacity 0.25s ease;
-
-}
-
-
-.festival-title:hover {
-
-  opacity: 0.5;
 
 }
 
@@ -109,12 +104,36 @@
 }
 
 
+/* desktop mouse hover only */
+
+@media (hover:hover) and (pointer:fine) {
+
+  .festival-title:hover {
+
+    opacity: 0.5;
+
+  }
+
+}
+
+
+/* keep title white when opened */
+
+.festival-item.open .festival-title {
+
+  opacity: 1;
+
+}
+
+
 
 /* =========================
    CONTENT
 ========================= */
 
 .content {
+
+  width: 100%;
 
   max-width: 620px;
 
@@ -132,7 +151,8 @@
 
   overflow: hidden;
 
-  transform: translateY(-8px);
+  transform:
+    translateY(-8px);
 
   transition:
     opacity 0.45s ease,
@@ -148,7 +168,7 @@
    DESKTOP HOVER
 ========================= */
 
-@media (hover:hover) {
+@media (hover:hover) and (pointer:fine) {
 
   .festival-item:hover .content {
 
@@ -156,7 +176,8 @@
 
     max-height: 2000px;
 
-    transform: translateY(0);
+    transform:
+      translateY(0);
 
     margin-top: 34px;
 
@@ -176,7 +197,8 @@
 
   max-height: 2000px;
 
-  transform: translateY(0);
+  transform:
+    translateY(0);
 
   margin-top: 34px;
 
@@ -281,7 +303,7 @@
   align-items: center;
 
   margin:
-    4px
+    18px
     0
     38px;
 
@@ -292,7 +314,7 @@
 
   display: block;
 
-  width: 88px;
+  width: 70px;
 
   height: auto;
 
@@ -376,16 +398,16 @@
   .organizer-logo {
 
     margin:
-      2px
+      20px
       0
-      32px;
+      30px;
 
   }
 
 
   .organizer-logo img {
 
-    width: 76px;
+    width: 64px;
 
   }
 
@@ -566,7 +588,7 @@
     <div class="organizer-logo">
 
       <img
-        src="images/morning-logo-white.png"
+        src="images/morning-logo-white-fixed.png"
         alt="Morning Chengdu / 早上好"
       >
 
