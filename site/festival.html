@@ -24,6 +24,7 @@
 
 <style>
 
+
 /* =========================
    FESTIVAL PAGE
 ========================= */
@@ -51,7 +52,7 @@
 
   text-align: center;
 
-  margin-bottom: 100px;
+  margin-bottom: 90px;
 
 }
 
@@ -136,16 +137,18 @@
   transform: translateY(-8px);
 
   transition:
-    opacity 0.5s ease,
+    opacity 0.45s ease,
     max-height 0.7s ease,
-    transform 0.5s ease,
-    margin 0.5s ease;
+    transform 0.45s ease,
+    margin 0.45s ease;
 
 }
 
 
 
-/* desktop hover */
+/* =========================
+   DESKTOP HOVER
+========================= */
 
 @media (hover:hover) {
 
@@ -157,7 +160,7 @@
 
     transform: translateY(0);
 
-    margin-top: 38px;
+    margin-top: 34px;
 
   }
 
@@ -165,7 +168,9 @@
 
 
 
-/* click / mobile */
+/* =========================
+   CLICK OPEN
+========================= */
 
 .festival-item.open .content {
 
@@ -175,7 +180,7 @@
 
   transform: translateY(0);
 
-  margin-top: 38px;
+  margin-top: 34px;
 
 }
 
@@ -190,12 +195,12 @@
   margin:
     0
     0
-    22px;
+    20px;
 
 }
 
 
-.content p:last-of-type {
+.content p:last-child {
 
   margin-bottom: 0;
 
@@ -209,20 +214,25 @@
   border-top:
     1px
     solid
-    rgba(255,255,255,0.35);
+    rgba(255,255,255,0.28);
 
   margin:
-    36px
+    34px
     0;
 
 }
 
 
+
+/* =========================
+   LINKS
+========================= */
+
 .content a {
 
   display: inline-block;
 
-  margin-top: 36px;
+  margin-top: 34px;
 
   color: #fff;
 
@@ -258,7 +268,7 @@
   margin:
     0
     0
-    45px
+    38px
     0;
 
   text-align: left;
@@ -270,16 +280,9 @@
 
   display: block;
 
-  width: 180px;
-
-  max-width: 50%;
+  width: 115px;
 
   height: auto;
-
-  object-fit: contain;
-
-  transform:
-    translateX(-10px);
 
 }
 
@@ -303,7 +306,7 @@
 
   .festival-item {
 
-    margin-bottom: 80px;
+    margin-bottom: 75px;
 
   }
 
@@ -333,30 +336,26 @@
 
   .festival-item.open .content {
 
-    margin-top: 32px;
+    margin-top: 30px;
 
   }
 
 
   .organizer-logo {
 
-    margin-bottom: 35px;
+    margin-bottom: 32px;
 
   }
 
 
   .organizer-logo img {
 
-    width: 150px;
-
-    max-width: 55%;
-
-    transform:
-      translateX(-8px);
+    width: 100px;
 
   }
 
 }
+
 
 </style>
 
@@ -373,6 +372,7 @@
   <a href="#" id="menu-button">
     MENU
   </a>
+
 
   <div class="menu-list">
 
@@ -403,6 +403,7 @@
 
 
 
+
 <main class="festival-container">
 
 
@@ -412,6 +413,7 @@
 ========================= -->
 
 <section class="festival-item">
+
 
   <h2 class="festival-title">
 
@@ -426,7 +428,9 @@
   </h2>
 
 
+
   <div class="content">
+
 
     <div class="chinese">
 
@@ -457,7 +461,9 @@
     </div>
 
 
+
     <hr>
+
 
 
     <div class="english">
@@ -488,7 +494,9 @@
 
     </div>
 
+
   </div>
+
 
 </section>
 
@@ -501,6 +509,7 @@
 ========================= -->
 
 <section class="festival-item">
+
 
   <h2 class="festival-title">
 
@@ -515,16 +524,19 @@
   </h2>
 
 
+
   <div class="content">
+
 
     <div class="organizer-logo">
 
       <img
-        src="images/morning-logo.png"
+        src="images/morning-logo-web.png"
         alt="Morning Chengdu / 早上好"
       >
 
     </div>
+
 
 
     <div class="chinese">
@@ -548,7 +560,9 @@
     </div>
 
 
+
     <hr>
+
 
 
     <div class="english">
@@ -571,7 +585,9 @@
 
     </div>
 
+
   </div>
+
 
 </section>
 
@@ -584,6 +600,7 @@
 ========================= -->
 
 <section class="festival-item">
+
 
   <h2 class="festival-title">
 
@@ -598,7 +615,9 @@
   </h2>
 
 
+
   <div class="content">
+
 
     <div class="chinese">
 
@@ -625,7 +644,9 @@
     </div>
 
 
+
     <hr>
+
 
 
     <div class="english">
@@ -653,11 +674,14 @@
     </div>
 
 
+
     <a href="family.html">
       CHUNYOU FAMILY →
     </a>
 
+
   </div>
+
 
 </section>
 
@@ -670,6 +694,7 @@
 
 
 <script>
+
 
 /* =========================
    MENU
@@ -685,6 +710,7 @@ const menuList =
 menuButton.onclick = function(e) {
 
   e.preventDefault();
+
 
   if (
     menuList.style.display === "flex"
@@ -716,13 +742,17 @@ festivalItems.forEach(function(item) {
     item.querySelector(".festival-title");
 
 
-  title.addEventListener("click", function() {
+  title.addEventListener(
+    "click",
+    function() {
 
-    item.classList.toggle("open");
+      item.classList.toggle("open");
 
-  });
+    }
+  );
 
 });
+
 
 </script>
 
