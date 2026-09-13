@@ -1,32 +1,647 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>CHUNYOU FESTIVAL</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>CHUNYOU FESTIVAL — Chengdu</title>
+
+  <meta
+    name="description"
+    content="CHUNYOU FESTIVAL. An independent music and cultural festival founded in Chengdu in 2013. We meet in spring."
+  >
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Noto+Sans+SC:wght@400;500;700&display=swap"
+    rel="stylesheet"
+  >
+
+  <style>
+
+    /* ==============================
+       GLOBAL
+    ============================== */
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      background: #000;
+    }
+
+    body {
+      background: #000;
+      color: #fff;
+
+      font-family:
+        "Inter",
+        "Noto Sans SC",
+        Arial,
+        sans-serif;
+
+      font-weight: 400;
+
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+
+    /* ==============================
+       MENU
+    ============================== */
+
+    .site-menu {
+      position: fixed;
+
+      top: 38px;
+      right: 48px;
+
+      z-index: 1000;
+
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+    }
+
+    #menu-button {
+      font-size: 13px;
+      letter-spacing: 0.08em;
+
+      color: #fff;
+
+      cursor: pointer;
+    }
+
+    .menu-list {
+      display: none;
+
+      flex-direction: column;
+      align-items: flex-end;
+
+      gap: 9px;
+
+      margin-top: 16px;
+    }
+
+    .menu-list a {
+      font-size: 14px;
+
+      color: #fff;
+
+      transition: opacity 0.2s ease;
+    }
+
+    .menu-list a:hover {
+      opacity: 0.5;
+    }
+
+
+    /* ==============================
+       HERO
+    ============================== */
+
+    .home-hero {
+      min-height: 100vh;
+
+      padding:
+        42px
+        50px
+        50px
+        50px;
+
+      display: flex;
+      flex-direction: column;
+
+      position: relative;
+    }
+
+
+    /* LOGO */
+
+    .home-logo {
+      width: 120px;
+    }
+
+    .home-logo img {
+      width: 100%;
+      height: auto;
+
+      display: block;
+    }
+
+
+    /* MAIN TITLE */
+
+    .home-main {
+      margin-top: auto;
+    }
+
+    .home-title {
+      max-width: 1300px;
+    }
+
+    .home-title h1 {
+      font-size: clamp(52px, 8vw, 125px);
+
+      font-weight: 500;
+
+      line-height: 0.9;
+
+      letter-spacing: -0.055em;
+
+      white-space: nowrap;
+    }
+
+    .home-est {
+      margin-top: 22px;
+
+      font-size: 13px;
+
+      letter-spacing: 0.14em;
+
+      text-transform: uppercase;
+    }
+
+
+    /* STATEMENT */
+
+    .home-statement {
+      margin-top: 65px;
+
+      font-size: clamp(22px, 2.6vw, 40px);
+
+      line-height: 1.15;
+
+      letter-spacing: -0.02em;
+    }
+
+
+    /* ==============================
+       ENTRIES
+    ============================== */
+
+    .home-entry {
+
+      padding:
+        0
+        50px
+        100px
+        50px;
+
+    }
+
+    .home-entry-item {
+
+      min-height: 110px;
+
+      display: grid;
+
+      grid-template-columns:
+        180px
+        1fr
+        auto;
+
+      align-items: center;
+
+      border-top:
+        1px solid
+        rgba(255,255,255,0.35);
+
+      transition:
+        opacity 0.2s ease;
+
+    }
+
+    .home-entry-item:last-child {
+
+      border-bottom:
+        1px solid
+        rgba(255,255,255,0.35);
+
+    }
+
+    .home-entry-item:hover {
+
+      opacity: 0.5;
+
+    }
+
+
+    .home-entry-label {
+
+      font-size: 11px;
+
+      letter-spacing: 0.14em;
+
+    }
+
+
+    .home-entry-title {
+
+      font-size:
+        clamp(
+          26px,
+          3.2vw,
+          50px
+        );
+
+      line-height: 1;
+
+      letter-spacing: -0.03em;
+
+    }
+
+
+    .home-entry-arrow {
+
+      font-size: 30px;
+
+      font-weight: 400;
+
+    }
+
+
+    /* ==============================
+       FOOTER
+    ============================== */
+
+    .home-footer {
+
+      padding:
+        0
+        50px
+        45px
+        50px;
+
+      display: flex;
+
+      justify-content: space-between;
+
+      align-items: flex-end;
+
+      font-size: 11px;
+
+      letter-spacing: 0.08em;
+
+      opacity: 0.65;
+
+    }
+
+
+    /* ==============================
+       MOBILE
+    ============================== */
+
+    @media (max-width: 800px) {
+
+
+      .site-menu {
+
+        top: 27px;
+        right: 20px;
+
+      }
+
+
+      .home-hero {
+
+        min-height: 100svh;
+
+        padding:
+          28px
+          20px
+          35px
+          20px;
+
+      }
+
+
+      .home-logo {
+
+        width: 92px;
+
+      }
+
+
+      .home-title h1 {
+
+        font-size: 48px;
+
+        line-height: 0.92;
+
+        white-space: normal;
+
+        max-width: 300px;
+
+      }
+
+
+      .home-est {
+
+        margin-top: 16px;
+
+        font-size: 11px;
+
+      }
+
+
+      .home-statement {
+
+        margin-top: 42px;
+
+        font-size: 23px;
+
+      }
+
+
+      .home-entry {
+
+        padding:
+          0
+          20px
+          70px
+          20px;
+
+      }
+
+
+      .home-entry-item {
+
+        min-height: 105px;
+
+        grid-template-columns:
+          1fr
+          auto;
+
+        padding:
+          20px
+          0;
+
+      }
+
+
+      .home-entry-label {
+
+        grid-column:
+          1 / 3;
+
+        margin-bottom: 10px;
+
+        font-size: 10px;
+
+      }
+
+
+      .home-entry-title {
+
+        font-size: 27px;
+
+      }
+
+
+      .home-entry-arrow {
+
+        font-size: 23px;
+
+      }
+
+
+      .home-footer {
+
+        padding:
+          0
+          20px
+          30px
+          20px;
+
+        font-size: 9px;
+
+      }
+
+    }
+
+
+  </style>
+
 </head>
+
 
 <body>
 
-<main class="hero">
 
-  <img src="logo.png" alt="CHUNYOU Logo" class="logo">
+  <!-- MENU -->
 
-  <h1>CHUNYOU FESTIVAL</h1>
+  <nav class="site-menu">
 
-  <p class="since">EST. 2013</p>
+    <a href="#" id="menu-button">
+      MENU
+    </a>
 
-  <nav class="menu">
-    <a href="archive.html">Archive</a>
-    <a href="festival.html">Festival</a>
-    <a href="#">News</a>
-    <a href="#">Family</a>
-    <a href="#">Contact</a>
+    <div class="menu-list">
+
+      <a href="archive.html">
+        Archive
+      </a>
+
+      <a href="festival.html">
+        Festival
+      </a>
+
+      <a href="news.html">
+        News
+      </a>
+
+      <a href="family.html">
+        Family
+      </a>
+
+      <a href="contact.html">
+        Contact
+      </a>
+
+    </div>
+
   </nav>
 
-</main>
+
+
+  <!-- HERO -->
+
+  <main>
+
+    <section class="home-hero">
+
+
+      <div class="home-logo">
+
+        <img
+          src="logo.png"
+          alt="CHUNYOU FESTIVAL"
+        >
+
+      </div>
+
+
+      <div class="home-main">
+
+
+        <div class="home-title">
+
+          <h1>
+            CHUNYOU FESTIVAL
+          </h1>
+
+          <div class="home-est">
+            EST. 2013 · CHENGDU
+          </div>
+
+        </div>
+
+
+        <div class="home-statement">
+          WE MEET IN SPRING.
+        </div>
+
+
+      </div>
+
+
+    </section>
+
+
+
+    <!-- ENTRIES -->
+
+    <section class="home-entry">
+
+
+      <a
+        href="archive-2026.html"
+        class="home-entry-item"
+      >
+
+        <div class="home-entry-label">
+          LATEST
+        </div>
+
+        <div class="home-entry-title">
+          CHUNYOU 2026
+        </div>
+
+        <div class="home-entry-arrow">
+          →
+        </div>
+
+      </a>
+
+
+
+      <a
+        href="archive.html"
+        class="home-entry-item"
+      >
+
+        <div class="home-entry-label">
+          ARCHIVE
+        </div>
+
+        <div class="home-entry-title">
+          2013 — 2026
+        </div>
+
+        <div class="home-entry-arrow">
+          →
+        </div>
+
+      </a>
+
+
+
+      <a
+        href="festival.html"
+        class="home-entry-item"
+      >
+
+        <div class="home-entry-label">
+          ABOUT
+        </div>
+
+        <div class="home-entry-title">
+          CHUNYOU FESTIVAL
+        </div>
+
+        <div class="home-entry-arrow">
+          →
+        </div>
+
+      </a>
+
+
+    </section>
+
+
+
+    <!-- FOOTER -->
+
+    <footer class="home-footer">
+
+      <div>
+        CHUNYOU FESTIVAL
+      </div>
+
+      <div>
+        CHENGDU · CHINA
+      </div>
+
+    </footer>
+
+
+  </main>
+
+
+
+  <script>
+
+    const menuButton =
+      document.getElementById("menu-button");
+
+    const menuList =
+      document.querySelector(".menu-list");
+
+
+    menuButton.addEventListener(
+      "click",
+      function(e) {
+
+        e.preventDefault();
+
+        if (
+          menuList.style.display === "flex"
+        ) {
+
+          menuList.style.display = "none";
+
+        } else {
+
+          menuList.style.display = "flex";
+
+        }
+
+      }
+    );
+
+  </script>
+
 
 </body>
+
 </html>
