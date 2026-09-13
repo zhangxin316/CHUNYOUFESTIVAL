@@ -42,6 +42,7 @@
 }
 
 
+
 /* =========================
    ITEM
 ========================= */
@@ -60,6 +61,7 @@
   margin-bottom: 0;
 
 }
+
 
 
 /* =========================
@@ -106,6 +108,7 @@
 }
 
 
+
 /* =========================
    CONTENT
 ========================= */
@@ -141,6 +144,7 @@
 }
 
 
+
 /* desktop hover */
 
 @media (hover:hover) {
@@ -149,7 +153,7 @@
 
     opacity: 1;
 
-    max-height: 1600px;
+    max-height: 1800px;
 
     transform: translateY(0);
 
@@ -160,19 +164,21 @@
 }
 
 
+
 /* click / mobile */
 
 .festival-item.open .content {
 
   opacity: 1;
 
-  max-height: 1600px;
+  max-height: 1800px;
 
   transform: translateY(0);
 
   margin-top: 38px;
 
 }
+
 
 
 /* =========================
@@ -242,6 +248,43 @@
 }
 
 
+
+/* =========================
+   MORNING LOGO
+========================= */
+
+.organizer-logo {
+
+  margin:
+    0
+    0
+    45px
+    0;
+
+  text-align: left;
+
+}
+
+
+.organizer-logo img {
+
+  display: block;
+
+  width: 180px;
+
+  max-width: 50%;
+
+  height: auto;
+
+  object-fit: contain;
+
+  transform:
+    translateX(-10px);
+
+}
+
+
+
 /* =========================
    MOBILE
 ========================= */
@@ -291,6 +334,25 @@
   .festival-item.open .content {
 
     margin-top: 32px;
+
+  }
+
+
+  .organizer-logo {
+
+    margin-bottom: 35px;
+
+  }
+
+
+  .organizer-logo img {
+
+    width: 150px;
+
+    max-width: 55%;
+
+    transform:
+      translateX(-8px);
 
   }
 
@@ -454,6 +516,16 @@
 
 
   <div class="content">
+
+    <div class="organizer-logo">
+
+      <img
+        src="images/morning-logo.png"
+        alt="Morning Chengdu / 早上好"
+      >
+
+    </div>
+
 
     <div class="chinese">
 
