@@ -2,12 +2,107 @@
 <html lang="zh-CN">
 
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>CHUNYOU ARCHIVE 2017</title>
 
 <link rel="stylesheet" href="style.css">
+
+
+<style>
+
+    /* =========================
+       POSTER COLUMN
+    ========================= */
+
+    .archive-poster-column {
+
+        width:32%;
+
+    }
+
+
+    .archive-poster-column .archive-poster {
+
+        width:100%;
+
+    }
+
+
+    /* =========================
+       YEAR NAVIGATION
+    ========================= */
+
+    .archive-year-nav {
+
+        width:100%;
+
+        margin-top:22px;
+
+        display:flex;
+
+        justify-content:space-between;
+
+        align-items:center;
+
+    }
+
+
+    .archive-year-nav a {
+
+        color:#888;
+
+        text-decoration:none;
+
+        font-size:13px;
+
+        font-weight:400;
+
+        letter-spacing:1.5px;
+
+        transition:color 0.25s ease;
+
+    }
+
+
+    .archive-year-nav a:hover {
+
+        color:#fff;
+
+    }
+
+
+    /* =========================
+       MOBILE
+    ========================= */
+
+    @media(max-width:800px) {
+
+        .archive-poster-column {
+
+            width:100%;
+
+        }
+
+
+        .archive-year-nav {
+
+            margin-top:18px;
+
+        }
+
+
+        .archive-year-nav a {
+
+            font-size:13px;
+
+        }
+
+    }
+
+</style>
 
 </head>
 
@@ -16,25 +111,62 @@
 
 <main class="archive-page">
 
+
     <div class="archive-header">
-        <a href="archive.html">CHUNYOU ARCHIVE</a>
+
+        <a href="archive.html">
+            CHUNYOU ARCHIVE
+        </a>
+
     </div>
 
 
     <section class="archive-detail">
 
 
-        <div class="archive-poster">
+        <!-- POSTER + YEAR NAVIGATION -->
 
-            <img src="images/2017/Poster.jpg" alt="CHUNYOU 2016">
+        <div class="archive-poster-column">
+
+
+            <div class="archive-poster">
+
+                <img
+                    src="images/2017/Poster.jpg"
+                    alt="CHUNYOU 2017"
+                >
+
+            </div>
+
+
+            <nav class="archive-year-nav">
+
+                <a href="archive-2016.html">
+                    ← 2016
+                </a>
+
+                <a href="archive-2018.html">
+                    2018 →
+                </a>
+
+            </nav>
+
 
         </div>
 
 
+
+        <!-- TEXT -->
+
         <div class="archive-text">
 
-            <h1>2017</h1>
 
+            <h1>
+                2017
+            </h1>
+
+
+            <!-- CHINESE -->
 
             <div class="chinese">
 
@@ -54,7 +186,7 @@
 
                 <p>
                 这一年的经历，也成为后来春游不断发展和变化的重要一部分。
-                </p>  
+                </p>
 
             </div>
 
@@ -62,31 +194,34 @@
             <hr>
 
 
+            <!-- ENGLISH -->
+
             <div class="english">
 
                 <p>
-                In 2016, CHUNYOU entered an important new chapter.
+                In 2017, CHUNYOU continued to take place in Chengdu.
                 </p>
 
                 <p>
-                The closure of “Zaoshanghao” in Sansheng Township,
-                Hongsha Village, forced CHUNYOU to leave its original location
-                and move to a new place nearby.
+                During this year, CHUNYOU kept searching for its place
+                within a city that was constantly changing.
+                The connections between music, art and friends
+                also became more natural and more deeply rooted.
                 </p>
 
                 <p>
-                The change of location marked the beginning of a new stage.
-                What had started as a relatively loose gathering
-                was gradually becoming a more complete and independent scene.
-                The era of CHUNYOU 2.0 had begun.
+                What had begun as a gathering was gradually becoming
+                a cultural space with its own atmosphere,
+                identity and memories.
                 </p>
 
                 <p>
-                A new space brought new possibilities.
-                Music, art, friends and the relationship between people and place
-                began to come together in a freer way.
+                The experiences of 2017 became another important part
+                of CHUNYOU's continuing growth and transformation.
                 </p>
 
+
+                <!-- GALLERY -->
 
                 <div class="archive-gallery">
 
@@ -95,6 +230,7 @@
                     </a>
 
                 </div>
+
 
             </div>
 
