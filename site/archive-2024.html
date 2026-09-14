@@ -86,6 +86,53 @@
     }
 
 
+    /* =========================
+       YEAR NAVIGATION
+    ========================= */
+
+    .archive-year-nav {
+
+      width: 100%;
+
+      margin-top: 22px;
+
+      display: flex;
+
+      justify-content: space-between;
+
+      align-items: center;
+
+    }
+
+
+    .archive-year-nav a {
+
+      color: #888;
+
+      text-decoration: none;
+
+      font-size: 13px;
+
+      font-weight: 400;
+
+      letter-spacing: 1.5px;
+
+      transition: color 0.25s ease;
+
+    }
+
+
+    .archive-year-nav a:hover {
+
+      color: #fff;
+
+    }
+
+
+    /* =========================
+       MOBILE
+    ========================= */
+
     @media (max-width: 800px) {
 
       .archive-left {
@@ -109,6 +156,20 @@
         font-size: 13px;
 
         margin-bottom: 15px;
+
+      }
+
+
+      .archive-year-nav {
+
+        margin-top: 18px;
+
+      }
+
+
+      .archive-year-nav a {
+
+        font-size: 13px;
 
       }
 
@@ -141,7 +202,7 @@
     <section class="archive-detail">
 
 
-      <!-- LEFT : POSTER + DOCUMENTARY -->
+      <!-- LEFT : POSTER + DOCUMENTARY + YEAR NAVIGATION -->
 
       <div class="archive-left">
 
@@ -194,6 +255,22 @@
 
 
         </section>
+
+
+
+        <!-- YEAR NAVIGATION -->
+
+        <nav class="archive-year-nav">
+
+          <a href="archive-2023.html">
+            ← 2023
+          </a>
+
+          <a href="archive-2025.html">
+            2025 →
+          </a>
+
+        </nav>
 
 
       </div>
