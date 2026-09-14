@@ -2,12 +2,107 @@
 <html lang="zh-CN">
 
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>CHUNYOU ARCHIVE 2016</title>
 
 <link rel="stylesheet" href="style.css">
+
+
+<style>
+
+    /* =========================
+       POSTER COLUMN
+    ========================= */
+
+    .archive-poster-column {
+
+        width:32%;
+
+    }
+
+
+    .archive-poster-column .archive-poster {
+
+        width:100%;
+
+    }
+
+
+    /* =========================
+       YEAR NAVIGATION
+    ========================= */
+
+    .archive-year-nav {
+
+        width:100%;
+
+        margin-top:22px;
+
+        display:flex;
+
+        justify-content:space-between;
+
+        align-items:center;
+
+    }
+
+
+    .archive-year-nav a {
+
+        color:#888;
+
+        text-decoration:none;
+
+        font-size:13px;
+
+        font-weight:400;
+
+        letter-spacing:1.5px;
+
+        transition:color 0.25s ease;
+
+    }
+
+
+    .archive-year-nav a:hover {
+
+        color:#fff;
+
+    }
+
+
+    /* =========================
+       MOBILE
+    ========================= */
+
+    @media(max-width:800px) {
+
+        .archive-poster-column {
+
+            width:100%;
+
+        }
+
+
+        .archive-year-nav {
+
+            margin-top:18px;
+
+        }
+
+
+        .archive-year-nav a {
+
+            font-size:13px;
+
+        }
+
+    }
+
+</style>
 
 </head>
 
@@ -17,19 +112,50 @@
 <main class="archive-page">
 
     <div class="archive-header">
-        <a href="archive.html">CHUNYOU ARCHIVE</a>
+
+        <a href="archive.html">
+            CHUNYOU ARCHIVE
+        </a>
+
     </div>
 
 
     <section class="archive-detail">
 
 
-        <div class="archive-poster">
+        <!-- POSTER + YEAR NAVIGATION -->
 
-            <img src="images/2016/Poster.jpg" alt="CHUNYOU 2016">
+        <div class="archive-poster-column">
+
+
+            <div class="archive-poster">
+
+                <img
+                    src="images/2016/Poster.jpg"
+                    alt="CHUNYOU 2016"
+                >
+
+            </div>
+
+
+            <nav class="archive-year-nav">
+
+                <a href="archive-2015.html">
+                    ← 2015
+                </a>
+
+                <a href="archive-2017.html">
+                    2017 →
+                </a>
+
+            </nav>
+
 
         </div>
 
+
+
+        <!-- TEXT -->
 
         <div class="archive-text">
 
@@ -45,7 +171,6 @@
                 <p>
                 三圣乡红砂村的「早上好」实体店，因为拆迁而离开了原来的场地，
                 “早上好”也随之搬到了附近一个新的场地，与当时的喜蜗成立了“Morninghouse”。
-        
                 </p>
 
                 <p>
