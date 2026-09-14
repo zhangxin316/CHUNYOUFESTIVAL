@@ -2,12 +2,107 @@
 <html lang="zh-CN">
 
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>CHUNYOU ARCHIVE 2013</title>
 
 <link rel="stylesheet" href="style.css">
+
+
+<style>
+
+    /* =========================
+       POSTER COLUMN
+    ========================= */
+
+    .archive-poster-column {
+
+        width:32%;
+
+    }
+
+
+    .archive-poster-column .archive-poster {
+
+        width:100%;
+
+    }
+
+
+    /* =========================
+       YEAR NAVIGATION
+    ========================= */
+
+    .archive-year-nav {
+
+        width:100%;
+
+        margin-top:22px;
+
+        display:flex;
+
+        justify-content:flex-end;
+
+        align-items:center;
+
+    }
+
+
+    .archive-year-nav a {
+
+        color:#888;
+
+        text-decoration:none;
+
+        font-size:13px;
+
+        font-weight:400;
+
+        letter-spacing:1.5px;
+
+        transition:color 0.25s ease;
+
+    }
+
+
+    .archive-year-nav a:hover {
+
+        color:#fff;
+
+    }
+
+
+    /* =========================
+       MOBILE
+    ========================= */
+
+    @media(max-width:800px) {
+
+        .archive-poster-column {
+
+            width:100%;
+
+        }
+
+
+        .archive-year-nav {
+
+            margin-top:18px;
+
+        }
+
+
+        .archive-year-nav a {
+
+            font-size:13px;
+
+        }
+
+    }
+
+</style>
 
 </head>
 
@@ -24,9 +119,29 @@
     <section class="archive-detail">
 
 
-        <div class="archive-poster">
+        <!-- POSTER + YEAR NAVIGATION -->
 
-          <img src="images/2013/Poster.jpg" alt="CHUNYOU 2013">
+        <div class="archive-poster-column">
+
+
+            <div class="archive-poster">
+
+                <img
+                    src="images/2013/Poster.jpg"
+                    alt="CHUNYOU 2013"
+                >
+
+            </div>
+
+
+            <nav class="archive-year-nav">
+
+                <a href="archive-2014.html">
+                    2014 →
+                </a>
+
+            </nav>
+
 
         </div>
 
@@ -117,13 +232,16 @@
                 became the emotional foundation that has carried CHUNYOU
                 through every edition that followed.
                 </p>
+
+
                 <div class="archive-gallery">
 
-    <a href="gallery-2013.html">
-        GALLERY / 图库
-    </a>
+                    <a href="gallery-2013.html">
+                        GALLERY / 图库
+                    </a>
 
-</div>
+                </div>
+
 
             </div>
 
