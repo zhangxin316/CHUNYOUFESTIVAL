@@ -3,87 +3,77 @@
 
 <head>
 
-  <meta charset="UTF-8">
+<meta charset="UTF-8">
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+>
 
-  <title>News | CHUNYOU FESTIVAL</title>
+<title>CHUNYOU NEWS</title>
 
-  <meta
-    name="description"
-    content="News from CHUNYOU FESTIVAL."
-  >
-
-  <link
+<link
     href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Noto+Sans+SC:wght@400;500;700&display=swap"
     rel="stylesheet"
-  >
+>
 
-  <link rel="stylesheet" href="style.css">
-
-
-  <style>
-
-    /* =========================
-       NEWS PAGE
-    ========================= */
-
-    .news-page {
-
-      min-height: 100vh;
-      min-height: 100svh;
-
-      display: flex;
-
-      align-items: center;
-      justify-content: center;
-
-      padding: 40px;
-
-      box-sizing: border-box;
-
-    }
+<link rel="stylesheet" href="style.css">
 
 
-    .news-message {
+<style>
 
-      margin: 0;
+/* =========================
+   NEWS
+========================= */
 
-      font-family: "Inter", Arial, sans-serif;
+.news-page{
 
-      font-size: clamp(28px, 4vw, 64px);
+    min-height:100vh;
+    min-height:100svh;
 
-      font-weight: 400;
+    display:flex;
 
-      letter-spacing: -0.02em;
+    align-items:center;
 
-      text-align: center;
+    justify-content:center;
 
-    }
+    padding:40px 20px;
 
-
-    /* =========================
-       MOBILE
-    ========================= */
-
-    @media (max-width: 800px) {
-
-      .news-page {
-
-        padding: 30px 20px;
-
-      }
+}
 
 
-      .news-message {
+.news-text{
 
-        font-size: 28px;
+    font-family:
+        "Inter",
+        Arial,
+        sans-serif;
 
-      }
+    font-size:
+        clamp(28px, 4vw, 64px);
+
+    font-weight:400;
+
+    line-height:1.2;
+
+    letter-spacing:-0.02em;
+
+    text-align:center;
+
+}
+
+
+@media(max-width:800px){
+
+    .news-text{
+
+        font-size:28px;
 
     }
 
-  </style>
+}
+
+</style>
 
 </head>
 
@@ -92,78 +82,130 @@
 <body>
 
 
-  <nav class="site-menu">
+<!-- =========================
+     SITE MENU
+========================= -->
 
-    <a href="#" id="menu-button">
-      MENU
+<nav
+    class="site-menu"
+    id="site-menu"
+>
+
+    <a
+        href="#"
+        id="menu-button"
+        aria-label="Open menu"
+        aria-expanded="false"
+    >
+
+        <span class="menu-icon"></span>
+
     </a>
 
 
     <div class="menu-list">
 
-      <a href="archive.html">
-        Archive
-      </a>
+        <a href="archive.html">
+            Archive
+        </a>
 
-      <a href="festival.html">
-        Festival
-      </a>
+        <a href="festival.html">
+            Festival
+        </a>
 
-      <a href="news.html">
-        News
-      </a>
+        <a href="news.html">
+            News
+        </a>
 
-      <a href="family.html">
-        Family
-      </a>
+        <a href="family.html">
+            Family
+        </a>
 
-      <a href="contact.html">
-        Contact
-      </a>
+        <a href="contact.html">
+            Contact
+        </a>
 
     </div>
 
-  </nav>
+</nav>
 
 
 
-  <main class="news-page">
+<!-- =========================
+     NEWS
+========================= -->
 
-    <p class="news-message">
-      Until next spring.
-    </p>
+<main class="news-page">
 
-  </main>
+    <div class="news-text">
 
+        Until next spring.
 
+    </div>
 
-  <script>
-
-    const menuButton =
-      document.getElementById("menu-button");
-
-    const menuList =
-      document.querySelector(".menu-list");
+</main>
 
 
-    menuButton.onclick = function(e) {
 
-      e.preventDefault();
+<script>
+
+/* =========================
+   SITE MENU
+========================= */
+
+const siteMenu =
+    document.getElementById("site-menu");
+
+const menuButton =
+    document.getElementById("menu-button");
+
+const menuList =
+    document.querySelector(".menu-list");
 
 
-      if (menuList.style.display === "flex") {
+menuButton.onclick = function(e){
 
-        menuList.style.display = "none";
+    e.preventDefault();
 
-      } else {
 
-        menuList.style.display = "flex";
+    const isOpen =
+        menuList.style.display === "flex";
 
-      }
 
-    };
+    if(isOpen){
 
-  </script>
+        menuList.style.display =
+            "none";
+
+        siteMenu.classList.remove(
+            "open"
+        );
+
+        menuButton.setAttribute(
+            "aria-expanded",
+            "false"
+        );
+
+
+    }else{
+
+        menuList.style.display =
+            "flex";
+
+        siteMenu.classList.add(
+            "open"
+        );
+
+        menuButton.setAttribute(
+            "aria-expanded",
+            "true"
+        );
+
+    }
+
+};
+
+</script>
 
 
 </body>
