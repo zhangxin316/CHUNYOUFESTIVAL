@@ -129,12 +129,137 @@
 }
 
 
-.year-item:hover
-.year-poster {
+.year-item:hover .year-poster {
 
     opacity: 1;
 
     visibility: visible;
+
+}
+
+
+
+/* =========================
+   MENU ICON
+========================= */
+
+.site-menu > #menu-button {
+
+    width: 30px;
+
+    height: 22px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 0;
+
+    font-size: 0;
+
+    letter-spacing: 0;
+
+}
+
+
+.menu-icon {
+
+    position: relative;
+
+    display: block;
+
+    width: 28px;
+
+    height: 1px;
+
+    background: #fff;
+
+    transition:
+        background 0.25s ease;
+
+}
+
+
+.menu-icon::before,
+.menu-icon::after {
+
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+
+    width: 28px;
+
+    height: 1px;
+
+    background: #fff;
+
+    transition:
+        transform 0.3s ease,
+        top 0.3s ease,
+        opacity 0.3s ease;
+
+}
+
+
+.menu-icon::before {
+
+    top: -8px;
+
+}
+
+
+.menu-icon::after {
+
+    top: 8px;
+
+}
+
+
+/* MENU OPEN → X */
+
+.site-menu.open .menu-icon {
+
+    background: transparent;
+
+}
+
+
+.site-menu.open .menu-icon::before {
+
+    top: 0;
+
+    transform: rotate(45deg);
+
+}
+
+
+.site-menu.open .menu-icon::after {
+
+    top: 0;
+
+    transform: rotate(-45deg);
+
+}
+
+
+/* Hover */
+
+.site-menu > #menu-button:hover .menu-icon,
+.site-menu > #menu-button:hover .menu-icon::before,
+.site-menu > #menu-button:hover .menu-icon::after {
+
+    background: #888;
+
+}
+
+
+.site-menu.open > #menu-button:hover .menu-icon {
+
+    background: transparent;
 
 }
 
@@ -185,6 +310,25 @@
 
     }
 
+
+    /* hamburger position */
+
+    .site-menu > #menu-button {
+
+        position: fixed;
+
+        top: 30px;
+
+        right: 24px;
+
+        width: 30px;
+
+        height: 22px;
+
+        z-index: 10001;
+
+    }
+
 }
 
 </style>
@@ -195,10 +339,17 @@
 <body>
 
 
-<nav class="site-menu">
+<nav class="site-menu" id="site-menu">
 
-    <a href="#" id="menu-button">
-        MENU
+    <a
+        href="#"
+        id="menu-button"
+        aria-label="Open menu"
+        aria-expanded="false"
+    >
+
+        <span class="menu-icon"></span>
+
     </a>
 
 
@@ -473,6 +624,9 @@
 
 <script>
 
+const siteMenu =
+    document.getElementById("site-menu");
+
 const menuButton =
     document.getElementById("menu-button");
 
@@ -485,15 +639,32 @@ menuButton.onclick = function(e) {
     e.preventDefault();
 
 
-    if (
-        menuList.style.display === "flex"
-    ) {
+    const isOpen =
+        menuList.style.display === "flex";
+
+
+    if (isOpen) {
 
         menuList.style.display = "none";
+
+        siteMenu.classList.remove("open");
+
+        menuButton.setAttribute(
+            "aria-expanded",
+            "false"
+        );
+
 
     } else {
 
         menuList.style.display = "flex";
+
+        siteMenu.classList.add("open");
+
+        menuButton.setAttribute(
+            "aria-expanded",
+            "true"
+        );
 
     }
 
