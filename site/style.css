@@ -5,26 +5,87 @@
 }
 
 
+html{
+    -webkit-text-size-adjust:100%;
+}
+
+
 body{
 
     background:#000;
 
     color:#fff;
 
-    font-family:"Inter","Noto Sans SC","Helvetica Neue",Arial,sans-serif;
+    font-family:
+        "Inter",
+        "Noto Sans SC",
+        "Helvetica Neue",
+        Arial,
+        sans-serif;
+
+    font-size:15px;
+
+    line-height:1.75;
+
+    -webkit-font-smoothing:antialiased;
+
+    text-rendering:optimizeLegibility;
+
+}
+
+
+a{
+
+    color:inherit;
 
 }
 
 
 
 /* =========================
-   Homepage
+   GLOBAL TYPOGRAPHY
+   ========================= */
+
+
+h1,
+h2,
+h3{
+
+    font-weight:500;
+
+}
+
+
+p{
+
+    line-height:1.75;
+
+}
+
+
+hr{
+
+    border:0;
+
+    border-top:1px solid rgba(255,255,255,0.22);
+
+    margin:36px 0;
+
+}
+
+
+
+
+
+/* =========================
+   HOMEPAGE
    ========================= */
 
 
 .hero{
 
     min-height:100vh;
+    min-height:100svh;
 
     display:flex;
 
@@ -34,46 +95,52 @@ body{
 
     align-items:center;
 
-}
+    padding:60px 40px;
 
+}
 
 
 .logo{
 
     width:120px;
 
-    margin-bottom:35px;
+    margin-bottom:38px;
 
 }
 
 
+.hero h1{
 
-h1{
+    width:100%;
+
+    text-align:center;
 
     font-size:34px;
 
     font-weight:600;
 
+    line-height:1.2;
+
     letter-spacing:6px;
 
-    margin-bottom:10px;
+    margin-bottom:14px;
 
 }
 
 
-
 .since{
 
-    font-size:14px;
+    font-size:13px;
 
     color:#888;
 
     letter-spacing:4px;
 
-    margin-bottom:55px;
+    line-height:1.4;
+
+    margin-bottom:58px;
 
 }
-
 
 
 .menu{
@@ -84,10 +151,9 @@ h1{
 
     align-items:center;
 
-    gap:18px;
+    gap:17px;
 
 }
-
 
 
 .menu a{
@@ -96,14 +162,15 @@ h1{
 
     text-decoration:none;
 
-    font-size:18px;
+    font-size:17px;
+
+    line-height:1.2;
 
     letter-spacing:2px;
 
-    transition:0.3s;
+    transition:color 0.25s ease;
 
 }
-
 
 
 .menu a:hover{
@@ -117,13 +184,14 @@ h1{
 
 
 /* =========================
-   Archive list
+   ARCHIVE LIST
    ========================= */
 
 
 .archive{
 
     min-height:100vh;
+    min-height:100svh;
 
     display:flex;
 
@@ -133,20 +201,26 @@ h1{
 
     align-items:center;
 
-}
+    padding:80px 40px;
 
+}
 
 
 .archive h1{
 
-    font-size:32px;
+    text-align:center;
 
-    letter-spacing:6px;
+    font-size:20px;
+
+    font-weight:400;
+
+    line-height:1.3;
+
+    letter-spacing:2px;
 
     margin-bottom:60px;
 
 }
-
 
 
 .years{
@@ -155,33 +229,37 @@ h1{
 
     flex-direction:column;
 
-    gap:20px;
+    align-items:center;
+
+    gap:18px;
 
     text-align:center;
 
 }
 
 
-
 .years a{
 
-    color:#888;
+    color:#fff;
 
     text-decoration:none;
 
-    font-size:20px;
+    font-size:16px;
 
-    letter-spacing:3px;
+    font-weight:400;
 
-    transition:0.3s;
+    line-height:1.4;
+
+    letter-spacing:0.5px;
+
+    transition:opacity 0.25s ease;
 
 }
 
 
-
 .years a:hover{
 
-    color:#fff;
+    opacity:0.45;
 
 }
 
@@ -190,28 +268,31 @@ h1{
 
 
 /* =========================
-   Archive detail
+   ARCHIVE DETAIL
    ========================= */
 
 
 .archive-page{
 
     min-height:100vh;
+    min-height:100svh;
 
-    padding:50px 40px;
+    padding:50px 40px 90px;
 
 }
-
 
 
 .archive-header{
 
-    font-size:16px;
+    font-size:13px;
 
-    margin-bottom:50px;
+    line-height:1.4;
+
+    letter-spacing:1.5px;
+
+    margin-bottom:56px;
 
 }
-
 
 
 .archive-header a{
@@ -220,8 +301,16 @@ h1{
 
     text-decoration:none;
 
+    transition:opacity 0.25s ease;
+
 }
 
+
+.archive-header a:hover{
+
+    opacity:0.5;
+
+}
 
 
 .archive-detail{
@@ -232,14 +321,13 @@ h1{
 
     align-items:flex-start;
 
-    gap:70px;
+    gap:72px;
 
     max-width:1000px;
 
     margin:auto;
 
 }
-
 
 
 .archive-poster{
@@ -249,15 +337,15 @@ h1{
 }
 
 
-
 .archive-poster img{
 
     width:100%;
 
+    height:auto;
+
     display:block;
 
 }
-
 
 
 .archive-text{
@@ -269,28 +357,43 @@ h1{
 }
 
 
-
 .archive-text h1{
 
     font-size:32px;
 
     font-weight:500;
 
-    letter-spacing:5px;
+    line-height:1.2;
 
-    margin-bottom:30px;
+    letter-spacing:4px;
+
+    margin-bottom:34px;
 
 }
 
 
-
 .archive-text p{
 
-    font-size:14px;
+    font-size:15px;
 
-    line-height:1.6;
+    line-height:1.75;
 
-    margin-bottom:14px;
+    margin-bottom:18px;
+
+}
+
+
+.archive-text p:last-child{
+
+    margin-bottom:0;
+
+}
+
+
+.archive-text .chinese,
+.archive-text .english{
+
+    width:100%;
 
 }
 
@@ -299,36 +402,40 @@ h1{
 
 
 /* =========================
-   Gallery Button
+   GALLERY BUTTON
    ========================= */
 
 
 .archive-gallery{
 
-    margin-top:40px;
+    margin-top:42px;
 
 }
 
 
-
 .archive-gallery a{
+
+    display:inline-block;
 
     color:#888;
 
     text-decoration:none;
 
-    border:1px solid #444;
+    border:1px solid #3d3d3d;
 
-    padding:10px 20px;
+    padding:10px 18px;
 
-    font-size:14px;
+    font-size:13px;
 
-    letter-spacing:2px;
+    line-height:1.2;
 
-    display:inline-block;
+    letter-spacing:1.8px;
+
+    transition:
+        color 0.25s ease,
+        border-color 0.25s ease;
 
 }
-
 
 
 .archive-gallery a:hover{
@@ -344,7 +451,7 @@ h1{
 
 
 /* =========================
-   Site Menu
+   SITE MENU
    ========================= */
 
 
@@ -361,26 +468,28 @@ h1{
 }
 
 
-
 .site-menu > a{
 
     color:#fff;
 
     text-decoration:none;
 
-    font-size:26px;
+    font-size:24px;
 
-    font-weight:700;
+    font-weight:600;
 
-    letter-spacing:5px;
+    line-height:1.2;
+
+    letter-spacing:4px;
+
+    transition:opacity 0.25s ease;
 
 }
 
 
-
 .site-menu > a:hover{
 
-    color:#888;
+    opacity:0.5;
 
 }
 
@@ -389,7 +498,7 @@ h1{
 
 
 /* =========================
-   Menu dropdown
+   MENU DROPDOWN
    ========================= */
 
 
@@ -397,14 +506,13 @@ h1{
 
     display:none;
 
-    margin-top:25px;
+    margin-top:26px;
 
     flex-direction:column;
 
-    gap:18px;
+    gap:16px;
 
 }
-
 
 
 .menu-list a{
@@ -413,17 +521,22 @@ h1{
 
     text-decoration:none;
 
-    font-size:18px;
+    font-size:17px;
 
-    letter-spacing:3px;
+    font-weight:400;
+
+    line-height:1.2;
+
+    letter-spacing:2px;
+
+    transition:opacity 0.25s ease;
 
 }
 
 
-
 .menu-list a:hover{
 
-    color:#888;
+    opacity:0.5;
 
 }
 
@@ -432,7 +545,7 @@ h1{
 
 
 /* =========================
-   Festival page
+   FESTIVAL PAGE
    ========================= */
 
 
@@ -440,43 +553,51 @@ h1{
 
     max-width:900px;
 
-    margin:120px auto;
+    margin:0 auto;
+
+    padding:140px 40px 120px;
 
     text-align:center;
 
 }
 
 
-
 .festival-item{
 
-    margin-bottom:80px;
+    margin-bottom:90px;
 
 }
 
+
+.festival-item:last-child{
+
+    margin-bottom:0;
+
+}
 
 
 .festival-item h2{
 
-    font-size:32px;
+    font-size:30px;
 
     font-weight:500;
 
-    line-height:1.4;
+    line-height:1.45;
 
 }
 
 
-
 .content{
 
-    max-width:720px;
+    max-width:620px;
 
-    margin:35px auto 0;
+    margin:0 auto;
 
-    text-align:left;
+    text-align:center;
 
-    line-height:1.6;
+    font-size:16px;
+
+    line-height:1.85;
 
     opacity:0;
 
@@ -485,29 +606,28 @@ h1{
     overflow:hidden;
 
     transition:
-        opacity 0.6s ease,
-        max-height 0.8s ease;
+        opacity 0.45s ease,
+        max-height 0.7s ease,
+        transform 0.45s ease,
+        margin 0.45s ease;
 
 }
-
-
-
-.festival-item:hover .content{
-
-    opacity:1;
-
-    max-height:1000px;
-
-}
-
 
 
 .content p{
 
-    margin-bottom:18px;
+    margin-bottom:20px;
+
+    line-height:1.85;
 
 }
 
+
+.content p:last-child{
+
+    margin-bottom:0;
+
+}
 
 
 .content a{
@@ -521,71 +641,130 @@ h1{
 
 
 /* =========================
-   Mobile
+   MOBILE
    ========================= */
 
 
 @media(max-width:800px){
 
 
-    h1{
+    body{
 
-        width:100%;
+        font-size:15px;
 
-        text-align:center;
+    }
+
+
+
+    /* =========================
+       HOMEPAGE MOBILE
+       ========================= */
+
+
+    .hero{
+
+        padding:40px 20px;
+
+    }
+
+
+    .hero h1{
 
         font-size:28px;
 
         letter-spacing:3px;
 
+        margin-bottom:12px;
+
     }
 
+
+    .since{
+
+        font-size:12px;
+
+        margin-bottom:50px;
+
+    }
+
+
+    .menu{
+
+        gap:16px;
+
+    }
+
+
+    .menu a{
+
+        font-size:17px;
+
+    }
+
+
+
+    /* =========================
+       ARCHIVE LIST MOBILE
+       ========================= */
+
+
+    .archive{
+
+        padding:80px 20px 60px;
+
+    }
+
+
+    .archive h1{
+
+        font-size:18px;
+
+        margin-bottom:50px;
+
+    }
+
+
+    .years{
+
+        gap:17px;
+
+    }
+
+
+    .years a{
+
+        font-size:16px;
+
+    }
+
+
+
+    /* =========================
+       ARCHIVE DETAIL MOBILE
+       ========================= */
 
 
     .archive-page{
 
-        padding:30px 20px;
+        padding:30px 20px 70px;
 
     }
 
 
+    .archive-header{
 
-    /* =========================
-       Festival mobile spacing
-       ========================= */
-
-
-    .festival-container{
-
-        margin-top:150px;
-
-        padding:0 25px;
+        margin-bottom:44px;
 
     }
-
-
-
-    .festival-item h2{
-
-        font-size:26px;
-
-    }
-
-
-
-    /* =========================
-       Archive mobile
-       ========================= */
 
 
     .archive-detail{
 
         flex-direction:column;
 
-        gap:40px;
+        gap:42px;
 
     }
-
 
 
     .archive-poster,
@@ -598,11 +777,76 @@ h1{
     }
 
 
+    .archive-text h1{
+
+        text-align:left;
+
+        font-size:28px;
+
+        letter-spacing:3px;
+
+        margin-bottom:28px;
+
+    }
+
+
+    .archive-text p{
+
+        font-size:15px;
+
+        line-height:1.75;
+
+        margin-bottom:17px;
+
+    }
+
+
+    .archive-text hr{
+
+        margin:32px 0;
+
+    }
+
+
+    .archive-gallery{
+
+        margin-top:36px;
+
+    }
 
 
 
     /* =========================
-       Mobile Fullscreen Menu
+       FESTIVAL MOBILE
+       ========================= */
+
+
+    .festival-container{
+
+        margin:0 auto;
+
+        padding:120px 22px 80px;
+
+    }
+
+
+    .festival-item{
+
+        margin-bottom:75px;
+
+    }
+
+
+    .festival-item h2{
+
+        font-size:26px;
+
+    }
+
+
+
+    /* =========================
+       MOBILE FULLSCREEN MENU
        ========================= */
 
 
@@ -619,9 +863,6 @@ h1{
     }
 
 
-
-    /* MENU button */
-
     .site-menu > a{
 
         position:fixed;
@@ -634,17 +875,14 @@ h1{
 
         color:#fff;
 
-        font-size:24px;
+        font-size:22px;
 
-        font-weight:700;
+        font-weight:600;
 
-        letter-spacing:5px;
+        letter-spacing:4px;
 
     }
 
-
-
-    /* Fullscreen black menu */
 
     .menu-list{
 
@@ -671,35 +909,22 @@ h1{
 
         align-items:center;
 
-        gap:28px;
+        gap:26px;
 
         z-index:10000;
 
     }
 
 
-
     .menu-list a{
 
-        color:#fff;
-
-        text-decoration:none;
-
-        font-size:24px;
+        font-size:22px;
 
         font-weight:400;
 
         line-height:1.2;
 
-        letter-spacing:3px;
-
-    }
-
-
-
-    .menu-list a:hover{
-
-        color:#888;
+        letter-spacing:2px;
 
     }
 
