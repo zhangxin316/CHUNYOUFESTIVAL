@@ -2,35 +2,183 @@
 <html lang="zh-CN">
 
 <head>
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>CHUNYOU ARCHIVE 2022</title>
+
   <link rel="stylesheet" href="style.css">
 
+
   <style>
+
+    /* =========================
+       CANCELLED YEAR
+    ========================= */
+
     .archive-2022-text {
-      color: red;
+
+      color:red;
+
     }
+
+
+    /* =========================
+       POSTER COLUMN
+    ========================= */
+
+    .archive-poster-column {
+
+      width:32%;
+
+    }
+
+
+    .archive-poster-column .archive-poster {
+
+      width:100%;
+
+    }
+
+
+    /* =========================
+       YEAR NAVIGATION
+    ========================= */
+
+    .archive-year-nav {
+
+      width:100%;
+
+      margin-top:22px;
+
+      display:flex;
+
+      justify-content:space-between;
+
+      align-items:center;
+
+    }
+
+
+    .archive-year-nav a {
+
+      color:#888;
+
+      text-decoration:none;
+
+      font-size:13px;
+
+      font-weight:400;
+
+      letter-spacing:1.5px;
+
+      transition:color 0.25s ease;
+
+    }
+
+
+    .archive-year-nav a:hover {
+
+      color:#fff;
+
+    }
+
+
+    /* =========================
+       MOBILE
+    ========================= */
+
+    @media(max-width:800px) {
+
+      .archive-poster-column {
+
+        width:100%;
+
+      }
+
+
+      .archive-year-nav {
+
+        margin-top:18px;
+
+      }
+
+
+      .archive-year-nav a {
+
+        font-size:13px;
+
+      }
+
+    }
+
   </style>
+
 </head>
+
 
 <body>
 
+
   <main class="archive-page">
 
+
     <div class="archive-header">
-      <a href="archive.html">CHUNYOU ARCHIVE</a>
+
+      <a href="archive.html">
+        CHUNYOU ARCHIVE
+      </a>
+
     </div>
+
 
     <section class="archive-detail">
 
-      <div class="archive-poster">
-        <img src="images/2022/Poster.jpeg" alt="CHUNYOU 2022">
+
+      <!-- POSTER + YEAR NAVIGATION -->
+
+      <div class="archive-poster-column">
+
+
+        <div class="archive-poster">
+
+          <img
+            src="images/2022/Poster.jpeg"
+            alt="CHUNYOU 2022"
+          >
+
+        </div>
+
+
+        <nav class="archive-year-nav">
+
+          <a href="archive-2021.html">
+            ← 2021
+          </a>
+
+          <a href="archive-2023.html">
+            2023 →
+          </a>
+
+        </nav>
+
+
       </div>
+
+
+
+      <!-- TEXT -->
 
       <div class="archive-text">
 
-        <h1>2022</h1>
+
+        <h1>
+          2022
+        </h1>
+
+
+        <!-- CHINESE -->
 
         <div class="chinese archive-2022-text">
 
@@ -41,7 +189,11 @@
 
         </div>
 
+
         <hr>
+
+
+        <!-- ENGLISH -->
 
         <div class="english archive-2022-text">
 
@@ -52,11 +204,16 @@
 
         </div>
 
+
       </div>
+
 
     </section>
 
+
   </main>
 
+
 </body>
+
 </html>
