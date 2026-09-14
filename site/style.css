@@ -35,9 +35,7 @@ body{
 
 
 a{
-
     color:inherit;
-
 }
 
 
@@ -50,16 +48,12 @@ a{
 h1,
 h2,
 h3{
-
     font-weight:500;
-
 }
 
 
 p{
-
     line-height:1.75;
-
 }
 
 
@@ -72,8 +66,6 @@ hr{
     margin:36px 0;
 
 }
-
-
 
 
 
@@ -174,12 +166,8 @@ hr{
 
 
 .menu a:hover{
-
     color:#fff;
-
 }
-
-
 
 
 
@@ -258,12 +246,8 @@ hr{
 
 
 .years a:hover{
-
     opacity:0.45;
-
 }
-
-
 
 
 
@@ -307,9 +291,7 @@ hr{
 
 
 .archive-header a:hover{
-
     opacity:0.5;
-
 }
 
 
@@ -331,9 +313,7 @@ hr{
 
 
 .archive-poster{
-
     width:32%;
-
 }
 
 
@@ -384,20 +364,14 @@ hr{
 
 
 .archive-text p:last-child{
-
     margin-bottom:0;
-
 }
 
 
 .archive-text .chinese,
 .archive-text .english{
-
     width:100%;
-
 }
-
-
 
 
 
@@ -407,9 +381,7 @@ hr{
 
 
 .archive-gallery{
-
     margin-top:42px;
-
 }
 
 
@@ -448,8 +420,6 @@ hr{
 
 
 
-
-
 /* =========================
    SITE MENU
    ========================= */
@@ -468,32 +438,151 @@ hr{
 }
 
 
-.site-menu > a{
+
+/* =========================
+   HAMBURGER BUTTON
+   ========================= */
+
+
+.site-menu > #menu-button{
+
+    width:30px;
+
+    height:22px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:0;
 
     color:#fff;
 
     text-decoration:none;
 
-    font-size:24px;
+    font-size:0;
 
-    font-weight:600;
+    line-height:1;
 
-    line-height:1.2;
+    letter-spacing:0;
 
-    letter-spacing:4px;
-
-    transition:opacity 0.25s ease;
+    cursor:pointer;
 
 }
 
 
-.site-menu > a:hover{
 
-    opacity:0.5;
+/* middle line */
+
+.menu-icon{
+
+    position:relative;
+
+    display:block;
+
+    width:28px;
+
+    height:1px;
+
+    background:#fff;
+
+    transition:
+        background 0.25s ease;
 
 }
 
 
+
+/* top + bottom lines */
+
+.menu-icon::before,
+.menu-icon::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    width:28px;
+
+    height:1px;
+
+    background:#fff;
+
+    transition:
+        transform 0.3s ease,
+        top 0.3s ease,
+        background 0.25s ease;
+
+}
+
+
+.menu-icon::before{
+    top:-8px;
+}
+
+
+.menu-icon::after{
+    top:8px;
+}
+
+
+
+/* =========================
+   MENU OPEN → X
+   ========================= */
+
+
+.site-menu.open .menu-icon{
+    background:transparent;
+}
+
+
+.site-menu.open .menu-icon::before{
+
+    top:0;
+
+    transform:rotate(45deg);
+
+}
+
+
+.site-menu.open .menu-icon::after{
+
+    top:0;
+
+    transform:rotate(-45deg);
+
+}
+
+
+
+/* =========================
+   MENU ICON HOVER
+   ========================= */
+
+
+@media (hover:hover) and (pointer:fine){
+
+    .site-menu > #menu-button:hover .menu-icon,
+    .site-menu > #menu-button:hover .menu-icon::before,
+    .site-menu > #menu-button:hover .menu-icon::after{
+
+        background:#888;
+
+    }
+
+
+    .site-menu.open > #menu-button:hover .menu-icon{
+
+        background:transparent;
+
+    }
+
+}
 
 
 
@@ -509,6 +598,8 @@ hr{
     margin-top:26px;
 
     flex-direction:column;
+
+    align-items:flex-end;
 
     gap:16px;
 
@@ -535,12 +626,8 @@ hr{
 
 
 .menu-list a:hover{
-
     opacity:0.5;
-
 }
-
-
 
 
 
@@ -563,16 +650,12 @@ hr{
 
 
 .festival-item{
-
     margin-bottom:90px;
-
 }
 
 
 .festival-item:last-child{
-
     margin-bottom:0;
-
 }
 
 
@@ -624,19 +707,13 @@ hr{
 
 
 .content p:last-child{
-
     margin-bottom:0;
-
 }
 
 
 .content a{
-
     color:#fff;
-
 }
-
-
 
 
 
@@ -649,9 +726,7 @@ hr{
 
 
     body{
-
         font-size:15px;
-
     }
 
 
@@ -662,9 +737,7 @@ hr{
 
 
     .hero{
-
         padding:40px 20px;
-
     }
 
 
@@ -689,16 +762,12 @@ hr{
 
 
     .menu{
-
         gap:16px;
-
     }
 
 
     .menu a{
-
         font-size:17px;
-
     }
 
 
@@ -725,16 +794,12 @@ hr{
 
 
     .years{
-
         gap:17px;
-
     }
 
 
     .years a{
-
         font-size:16px;
-
     }
 
 
@@ -752,9 +817,7 @@ hr{
 
 
     .archive-header{
-
         margin-bottom:44px;
-
     }
 
 
@@ -802,16 +865,12 @@ hr{
 
 
     .archive-text hr{
-
         margin:32px 0;
-
     }
 
 
     .archive-gallery{
-
         margin-top:36px;
-
     }
 
 
@@ -831,16 +890,12 @@ hr{
 
 
     .festival-item{
-
         margin-bottom:75px;
-
     }
 
 
     .festival-item h2{
-
         font-size:26px;
-
     }
 
 
@@ -863,7 +918,7 @@ hr{
     }
 
 
-    .site-menu > a{
+    .site-menu > #menu-button{
 
         position:fixed;
 
@@ -871,15 +926,11 @@ hr{
 
         right:24px;
 
+        width:30px;
+
+        height:22px;
+
         z-index:10001;
-
-        color:#fff;
-
-        font-size:22px;
-
-        font-weight:600;
-
-        letter-spacing:4px;
 
     }
 
@@ -917,6 +968,8 @@ hr{
 
 
     .menu-list a{
+
+        color:#fff;
 
         font-size:22px;
 
