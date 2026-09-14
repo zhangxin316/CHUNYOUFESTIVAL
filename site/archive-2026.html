@@ -2,29 +2,168 @@
 <html lang="zh-CN">
 
 <head>
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>CHUNYOU ARCHIVE 2026</title>
+
   <link rel="stylesheet" href="style.css">
+
+
+  <style>
+
+    /* =========================
+       POSTER COLUMN
+    ========================= */
+
+    .archive-poster-column {
+
+      width:32%;
+
+    }
+
+
+    .archive-poster-column .archive-poster {
+
+      width:100%;
+
+    }
+
+
+    /* =========================
+       YEAR NAVIGATION
+    ========================= */
+
+    .archive-year-nav {
+
+      width:100%;
+
+      margin-top:22px;
+
+      display:flex;
+
+      justify-content:flex-start;
+
+      align-items:center;
+
+    }
+
+
+    .archive-year-nav a {
+
+      color:#888;
+
+      text-decoration:none;
+
+      font-size:13px;
+
+      font-weight:400;
+
+      letter-spacing:1.5px;
+
+      transition:color 0.25s ease;
+
+    }
+
+
+    .archive-year-nav a:hover {
+
+      color:#fff;
+
+    }
+
+
+    /* =========================
+       MOBILE
+    ========================= */
+
+    @media(max-width:800px) {
+
+      .archive-poster-column {
+
+        width:100%;
+
+      }
+
+
+      .archive-year-nav {
+
+        margin-top:18px;
+
+      }
+
+
+      .archive-year-nav a {
+
+        font-size:13px;
+
+      }
+
+    }
+
+  </style>
+
 </head>
+
 
 <body>
 
+
   <main class="archive-page">
 
+
     <div class="archive-header">
-      <a href="archive.html">CHUNYOU ARCHIVE</a>
+
+      <a href="archive.html">
+        CHUNYOU ARCHIVE
+      </a>
+
     </div>
+
 
     <section class="archive-detail">
 
-      <div class="archive-poster">
-        <img src="images/2026/Poster.jpg" alt="CHUNYOU 2026">
+
+      <!-- POSTER + YEAR NAVIGATION -->
+
+      <div class="archive-poster-column">
+
+
+        <div class="archive-poster">
+
+          <img
+            src="images/2026/Poster.jpg"
+            alt="CHUNYOU 2026"
+          >
+
+        </div>
+
+
+        <nav class="archive-year-nav">
+
+          <a href="archive-2025.html">
+            ← 2025
+          </a>
+
+        </nav>
+
+
       </div>
+
+
+
+      <!-- TEXT -->
 
       <div class="archive-text">
 
-        <h1>2026</h1>
+
+        <h1>
+          2026
+        </h1>
+
+
+        <!-- CHINESE -->
 
         <div class="chinese">
 
@@ -66,7 +205,11 @@
 
         </div>
 
+
         <hr>
+
+
+        <!-- ENGLISH -->
 
         <div class="english">
 
@@ -108,17 +251,26 @@
 
         </div>
 
+
+        <!-- GALLERY -->
+
         <div class="archive-gallery">
+
           <a href="gallery-2026.html">
             GALLERY / 图库
           </a>
+
         </div>
+
 
       </div>
 
+
     </section>
 
+
   </main>
+
 
 </body>
 
