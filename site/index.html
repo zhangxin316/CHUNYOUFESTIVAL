@@ -30,6 +30,48 @@
   >
 
 
+  <!-- =========================
+       STRUCTURED DATA
+  ========================= -->
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://www.chunyoufestival.com/#organization",
+        "name": "CHUNYOU FESTIVAL",
+        "alternateName": [
+          "春游音乐节",
+          "CHUNYOU"
+        ],
+        "url": "https://www.chunyoufestival.com/",
+        "logo": "https://www.chunyoufestival.com/logo.png",
+        "foundingDate": "2013",
+        "sameAs": [
+          "https://www.instagram.com/chunyoufestival/"
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://www.chunyoufestival.com/#website",
+        "url": "https://www.chunyoufestival.com/",
+        "name": "CHUNYOU FESTIVAL 春游音乐节",
+        "alternateName": "春游音乐节",
+        "publisher": {
+          "@id": "https://www.chunyoufestival.com/#organization"
+        },
+        "inLanguage": [
+          "zh-CN",
+          "en"
+        ]
+      }
+    ]
+  }
+  </script>
+
+
   <link
     href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Noto+Sans+SC:wght@400;500;700&display=swap"
     rel="stylesheet"
@@ -92,120 +134,4 @@
 
       font-weight: 400;
 
-      letter-spacing: -0.02em;
-
-      text-align: center;
-
-    }
-
-
-    @media (max-width: 800px) {
-
-      .entry-text {
-
-        font-size: 28px;
-
-        padding: 0 20px;
-
-      }
-
-    }
-
-  </style>
-
-</head>
-
-
-
-<body>
-
-
-  <!-- 第一次进入网站时显示 -->
-
-  <div class="entry-screen" id="entryScreen">
-
-    <div class="entry-text">
-      WE MEET IN SPRING.
-    </div>
-
-  </div>
-
-
-
-  <!-- 首页 -->
-
-  <main class="hero">
-
-    <img
-      src="logo.png"
-      alt="CHUNYOU FESTIVAL 春游音乐节"
-      class="logo"
-    >
-
-
-    <h1>
-      CHUNYOU FESTIVAL
-    </h1>
-
-
-    <p class="since">
-      EST. 2013
-    </p>
-
-
-    <nav class="menu">
-
-      <a href="archive.html">
-        Archive
-      </a>
-
-      <a href="festival.html">
-        Festival
-      </a>
-
-      <a href="news.html">
-        News
-      </a>
-
-      <a href="family.html">
-        Family
-      </a>
-
-      <a href="contact.html">
-        Contact
-      </a>
-
-    </nav>
-
-  </main>
-
-
-
-  <script>
-
-    const entryScreen =
-      document.getElementById("entryScreen");
-
-
-    entryScreen.addEventListener(
-      "click",
-      function() {
-
-        entryScreen.classList.add("hide");
-
-
-        setTimeout(function() {
-
-          entryScreen.style.display = "none";
-
-        }, 800);
-
-      }
-    );
-
-  </script>
-
-
-</body>
-
-</html>
+      letter-spacing
