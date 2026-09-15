@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -27,329 +26,261 @@
    FAMILY PAGE
 ========================= */
 
-.family-page{
-
-    min-height:100vh;
-    min-height:100svh;
-
-    padding:
-        120px
-        50px
-        140px;
-
+.family-page {
+    min-height: 100vh;
+    min-height: 100svh;
+    padding: 120px 50px 150px;
 }
 
-
-.family-title{
-
-    text-align:center;
-
-    font-size:20px;
-
-    font-weight:400;
-
-    line-height:1.3;
-
-    letter-spacing:3px;
-
-    margin-bottom:100px;
-
+.family-title {
+    text-align: center;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 1.3;
+    letter-spacing: 3px;
+    margin-bottom: 100px;
 }
-
 
 
 /* =========================
    FAMILY GRID
 ========================= */
 
-.family-grid{
+.family-grid {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
 
-    width:100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
 
-    max-width:1180px;
-
-    margin:0 auto;
-
-    display:grid;
-
-    grid-template-columns:
-        repeat(4, 1fr);
-
-    column-gap:70px;
-
-    row-gap:90px;
-
+    column-gap: 65px;
+    row-gap: 80px;
 }
-
 
 
 /* =========================
    FAMILY ITEM
 ========================= */
 
-.family-item{
-
-    position:relative;
-
-    min-width:0;
-
-    text-align:center;
-
+.family-item {
+    position: relative;
+    min-width: 0;
+    text-align: center;
 }
 
+.family-visual {
+    width: 100%;
+    height: 150px;
 
-.family-visual{
-
-    width:100%;
-
-    height:130px;
-
-    display:flex;
-
-    align-items:center;
-
-    justify-content:center;
-
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-
-
-.family-visual img{
-
-    display:block;
-
-    width:auto;
-
-    height:auto;
-
-    max-width:180px;
-
-    max-height:90px;
-
-    object-fit:contain;
-
-    transition:
-        opacity 0.35s ease,
-        transform 0.35s ease;
-
-}
-
 
 
 /* =========================
-   FAMILY NAME
+   DEFAULT LOGOS
+
+   Most transparent PNG logos
+   are black artwork.
+   Turn them white on black.
 ========================= */
 
-.family-name{
+.family-item:not(.photo):not(.original) .family-visual img {
+    display: block;
 
-    margin-top:20px;
+    width: auto;
+    height: auto;
 
-    color:#777;
+    max-width: 190px;
+    max-height: 100px;
 
-    font-size:12px;
+    object-fit: contain;
 
-    font-weight:400;
-
-    line-height:1.5;
-
-    letter-spacing:1px;
-
-    opacity:0;
-
-    transform:translateY(4px);
+    filter: brightness(0) invert(1);
 
     transition:
         opacity 0.3s ease,
         transform 0.3s ease;
-
 }
-
-
-.family-item:hover .family-name{
-
-    opacity:1;
-
-    transform:translateY(0);
-
-}
-
-
-.family-item:hover .family-visual img{
-
-    opacity:0.72;
-
-    transform:scale(0.98);
-
-}
-
 
 
 /* =========================
    WIDE LOGOS
 ========================= */
 
-.family-item.wide .family-visual img{
-
-    max-width:210px;
-
-    max-height:80px;
-
+.family-item.wide:not(.photo):not(.original) .family-visual img {
+    max-width: 220px;
+    max-height: 90px;
 }
-
 
 
 /* =========================
-   SMALL / SQUARE LOGOS
+   SQUARE LOGOS
 ========================= */
 
-.family-item.square .family-visual img{
-
-    max-width:105px;
-
-    max-height:105px;
-
+.family-item.square:not(.photo):not(.original) .family-visual img {
+    max-width: 115px;
+    max-height: 115px;
 }
-
 
 
 /* =========================
-   PHOTO ITEMS
+   ORIGINAL IMAGE
+
+   Images that should NOT
+   receive white-logo filter.
 ========================= */
 
-.family-item.photo .family-visual{
+.family-item.original .family-visual img {
+    display: block;
 
-    height:180px;
+    width: auto;
+    height: auto;
 
+    max-width: 130px;
+    max-height: 120px;
+
+    object-fit: contain;
+
+    filter: none;
+
+    transition:
+        opacity 0.3s ease,
+        transform 0.3s ease;
 }
 
 
-.family-item.photo .family-visual img{
+/* =========================
+   PHOTOS
+========================= */
 
-    width:135px;
-
-    height:180px;
-
-    max-width:none;
-
-    max-height:none;
-
-    object-fit:cover;
-
+.family-item.photo .family-visual {
+    height: 210px;
 }
 
+.family-item.photo .family-visual img {
+    display: block;
+
+    width: 150px;
+    height: 200px;
+
+    max-width: none;
+    max-height: none;
+
+    object-fit: cover;
+
+    filter: none;
+
+    transition:
+        opacity 0.3s ease,
+        transform 0.3s ease;
+}
+
+
+/* =========================
+   FAMILY NAME
+========================= */
+
+.family-name {
+    margin-top: 15px;
+
+    color: #777;
+
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.5;
+    letter-spacing: 1px;
+
+    opacity: 0;
+    transform: translateY(4px);
+
+    transition:
+        opacity 0.3s ease,
+        transform 0.3s ease;
+}
+
+.family-item:hover .family-name {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.family-item:hover .family-visual img {
+    opacity: 0.6;
+    transform: scale(0.97);
+}
 
 
 /* =========================
    MOBILE
 ========================= */
 
-@media(max-width:800px){
+@media (max-width: 800px) {
 
-    .family-page{
-
-        padding:
-            100px
-            22px
-            90px;
-
+    .family-page {
+        padding: 100px 22px 90px;
     }
 
-
-    .family-title{
-
-        font-size:18px;
-
-        letter-spacing:2.5px;
-
-        margin-bottom:70px;
-
+    .family-title {
+        font-size: 18px;
+        letter-spacing: 2.5px;
+        margin-bottom: 70px;
     }
 
-
-    .family-grid{
-
-        grid-template-columns:
-            repeat(2, 1fr);
-
-        column-gap:28px;
-
-        row-gap:58px;
-
+    .family-grid {
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 28px;
+        row-gap: 55px;
     }
 
-
-    .family-visual{
-
-        height:100px;
-
+    .family-visual {
+        height: 115px;
     }
 
-
-    .family-visual img{
-
-        max-width:125px;
-
-        max-height:70px;
-
+    .family-item:not(.photo):not(.original) .family-visual img {
+        max-width: 130px;
+        max-height: 78px;
     }
 
-
-    .family-item.wide .family-visual img{
-
-        max-width:140px;
-
-        max-height:65px;
-
+    .family-item.wide:not(.photo):not(.original) .family-visual img {
+        max-width: 145px;
+        max-height: 72px;
     }
 
-
-    .family-item.square .family-visual img{
-
-        max-width:80px;
-
-        max-height:80px;
-
+    .family-item.square:not(.photo):not(.original) .family-visual img {
+        max-width: 88px;
+        max-height: 88px;
     }
 
-
-    .family-name{
-
-        margin-top:14px;
-
-        font-size:11px;
-
-        line-height:1.45;
-
-        letter-spacing:0.5px;
-
-        opacity:1;
-
-        transform:none;
-
+    .family-item.original .family-visual img {
+        max-width: 95px;
+        max-height: 95px;
     }
 
-
-    .family-item.photo .family-visual{
-
-        height:150px;
-
+    .family-item.photo .family-visual {
+        height: 165px;
     }
 
-
-    .family-item.photo .family-visual img{
-
-        width:112px;
-
-        height:150px;
-
+    .family-item.photo .family-visual img {
+        width: 115px;
+        height: 155px;
     }
 
+    .family-name {
+        margin-top: 12px;
 
-    .family-item:hover .family-visual img{
+        font-size: 11px;
+        line-height: 1.45;
+        letter-spacing: 0.5px;
 
-        opacity:1;
+        opacity: 1;
+        transform: none;
+    }
 
-        transform:none;
-
+    .family-item:hover .family-visual img {
+        opacity: 1;
+        transform: none;
     }
 
 }
@@ -357,7 +288,6 @@
 </style>
 
 </head>
-
 
 
 <body>
@@ -378,9 +308,7 @@
         aria-label="Open menu"
         aria-expanded="false"
     >
-
         <span class="menu-icon"></span>
-
     </a>
 
 
@@ -418,15 +346,12 @@
 
 <main class="family-page">
 
-
 <h1 class="family-title">
     CHUNYOU FAMILY
 </h1>
 
 
-
 <div class="family-grid">
-
 
 
 <!-- 01 -->
@@ -434,12 +359,10 @@
 <div class="family-item wide">
 
     <div class="family-visual">
-
         <img
             src="images/family/72岛文化.png"
             alt="72岛文化"
         >
-
     </div>
 
     <div class="family-name">
@@ -449,18 +372,15 @@
 </div>
 
 
-
 <!-- 02 -->
 
 <div class="family-item">
 
     <div class="family-visual">
-
         <img
             src="images/family/北河三.png"
             alt="北河三"
         >
-
     </div>
 
     <div class="family-name">
@@ -470,18 +390,15 @@
 </div>
 
 
-
 <!-- 03 -->
 
 <div class="family-item wide">
 
     <div class="family-visual">
-
         <img
             src="images/family/便利音乐.png"
             alt="便利音乐"
         >
-
     </div>
 
     <div class="family-name">
@@ -491,18 +408,15 @@
 </div>
 
 
-
 <!-- 04 -->
 
 <div class="family-item square">
 
     <div class="family-visual">
-
         <img
             src="images/family/丙火创意.png"
             alt="丙火创意"
         >
-
     </div>
 
     <div class="family-name">
@@ -512,18 +426,15 @@
 </div>
 
 
-
 <!-- 05 -->
 
 <div class="family-item">
 
     <div class="family-visual">
-
         <img
             src="images/family/东秩序.png"
             alt="东秩序"
         >
-
     </div>
 
     <div class="family-name">
@@ -533,18 +444,15 @@
 </div>
 
 
-
 <!-- 06 -->
 
 <div class="family-item">
 
     <div class="family-visual">
-
         <img
             src="images/family/梵木文创.png"
             alt="梵木文创"
         >
-
     </div>
 
     <div class="family-name">
@@ -554,18 +462,15 @@
 </div>
 
 
-
 <!-- 07 -->
 
 <div class="family-item wide">
 
     <div class="family-visual">
-
         <img
             src="images/family/费那奇动画.png"
             alt="费那奇动画"
         >
-
     </div>
 
     <div class="family-name">
@@ -575,18 +480,15 @@
 </div>
 
 
-
 <!-- 08 -->
 
-<div class="family-item">
+<div class="family-item wide">
 
     <div class="family-visual">
-
         <img
             src="images/family/过载喜剧.png"
             alt="过载喜剧"
         >
-
     </div>
 
     <div class="family-name">
@@ -596,18 +498,15 @@
 </div>
 
 
-
 <!-- 09 -->
 
 <div class="family-item wide">
 
     <div class="family-visual">
-
         <img
             src="images/family/简单声学.png"
             alt="简单声学"
         >
-
     </div>
 
     <div class="family-name">
@@ -617,18 +516,15 @@
 </div>
 
 
-
 <!-- 10 -->
 
-<div class="family-item square">
+<div class="family-item original">
 
     <div class="family-visual">
-
         <img
             src="images/family/平舟度川.jpeg"
             alt="平舟度川"
         >
-
     </div>
 
     <div class="family-name">
@@ -638,18 +534,15 @@
 </div>
 
 
-
 <!-- 11 -->
 
 <div class="family-item wide">
 
     <div class="family-visual">
-
         <img
             src="images/family/瑞士文化基金会.png"
             alt="瑞士文化基金会"
         >
-
     </div>
 
     <div class="family-name">
@@ -659,18 +552,15 @@
 </div>
 
 
-
 <!-- 12 -->
 
 <div class="family-item">
 
     <div class="family-visual">
-
         <img
             src="images/family/山顶露营.png"
             alt="山顶露营"
         >
-
     </div>
 
     <div class="family-name">
@@ -680,18 +570,15 @@
 </div>
 
 
-
 <!-- 13 -->
 
 <div class="family-item photo">
 
     <div class="family-visual">
-
         <img
             src="images/family/瘦影.jpeg"
             alt="瘦影"
         >
-
     </div>
 
     <div class="family-name">
@@ -701,18 +588,15 @@
 </div>
 
 
-
 <!-- 14 -->
 
-<div class="family-item">
+<div class="family-item wide">
 
     <div class="family-visual">
-
         <img
             src="images/family/瞬时山野.png"
             alt="瞬时山野"
         >
-
     </div>
 
     <div class="family-name">
@@ -722,18 +606,15 @@
 </div>
 
 
-
 <!-- 15 -->
 
 <div class="family-item square">
 
     <div class="family-visual">
-
         <img
             src="images/family/厅.png"
             alt="厅"
         >
-
     </div>
 
     <div class="family-name">
@@ -743,18 +624,15 @@
 </div>
 
 
-
 <!-- 16 -->
 
 <div class="family-item photo">
 
     <div class="family-visual">
-
         <img
             src="images/family/余伟YuWei.jpg"
             alt="余伟 YuWei"
         >
-
     </div>
 
     <div class="family-name">
@@ -764,18 +642,15 @@
 </div>
 
 
-
 <!-- 17 -->
 
 <div class="family-item">
 
     <div class="family-visual">
-
         <img
             src="images/family/院子文创园.png"
             alt="院子文创园"
         >
-
     </div>
 
     <div class="family-name">
@@ -785,18 +660,15 @@
 </div>
 
 
-
 <!-- 18 -->
 
 <div class="family-item">
 
     <div class="family-visual">
-
         <img
             src="images/family/张霖.png"
             alt="张霖"
         >
-
     </div>
 
     <div class="family-name">
@@ -806,18 +678,15 @@
 </div>
 
 
-
 <!-- 19 -->
 
 <div class="family-item square">
 
     <div class="family-visual">
-
         <img
             src="images/family/诊所.png"
             alt="诊所"
         >
-
     </div>
 
     <div class="family-name">
@@ -827,18 +696,15 @@
 </div>
 
 
-
 <!-- 20 -->
 
-<div class="family-item">
+<div class="family-item wide">
 
     <div class="family-visual">
-
         <img
             src="images/family/卓锐文化.png"
             alt="卓锐文化"
         >
-
     </div>
 
     <div class="family-name">
@@ -848,18 +714,15 @@
 </div>
 
 
-
 <!-- 21 -->
 
 <div class="family-item square">
 
     <div class="family-visual">
-
         <img
             src="images/family/CDCR.png"
             alt="CDCR"
         >
-
     </div>
 
     <div class="family-name">
@@ -869,18 +732,15 @@
 </div>
 
 
-
 <!-- 22 -->
 
 <div class="family-item wide">
 
     <div class="family-visual">
-
         <img
             src="images/family/DhiDhiDhi.png"
             alt="DhiDhiDhi"
         >
-
     </div>
 
     <div class="family-name">
@@ -890,18 +750,15 @@
 </div>
 
 
-
 <!-- 23 -->
 
 <div class="family-item wide">
 
     <div class="family-visual">
-
         <img
             src="images/family/manual-beings-logo.png"
             alt="Manual Beings"
         >
-
     </div>
 
     <div class="family-name">
@@ -911,18 +768,15 @@
 </div>
 
 
-
 <!-- 24 -->
 
 <div class="family-item wide">
 
     <div class="family-visual">
-
         <img
             src="images/family/Morning集物所.png"
             alt="Morning 集物所"
         >
-
     </div>
 
     <div class="family-name">
@@ -932,18 +786,15 @@
 </div>
 
 
-
 <!-- 25 -->
 
-<div class="family-item">
+<div class="family-item square">
 
     <div class="family-visual">
-
         <img
             src="images/family/MSN.png"
             alt="MSN"
         >
-
     </div>
 
     <div class="family-name">
@@ -953,18 +804,15 @@
 </div>
 
 
-
 <!-- 26 -->
 
 <div class="family-item wide">
 
     <div class="family-visual">
-
         <img
             src="images/family/muffletruffle.png"
             alt="Muffle Truffle"
         >
-
     </div>
 
     <div class="family-name">
@@ -974,18 +822,15 @@
 </div>
 
 
-
 <!-- 27 -->
 
 <div class="family-item wide">
 
     <div class="family-visual">
-
         <img
             src="images/family/NEWNOISE.png"
             alt="NEW NOISE"
         >
-
     </div>
 
     <div class="family-name">
@@ -995,18 +840,15 @@
 </div>
 
 
-
 <!-- 28 -->
 
 <div class="family-item photo">
 
     <div class="family-visual">
-
         <img
             src="images/family/Niffler.jpeg"
             alt="Niffler"
         >
-
     </div>
 
     <div class="family-name">
@@ -1016,18 +858,15 @@
 </div>
 
 
-
 <!-- 29 -->
 
 <div class="family-item">
 
     <div class="family-visual">
-
         <img
             src="images/family/nulab.png"
             alt="Nulab"
         >
-
     </div>
 
     <div class="family-name">
@@ -1037,18 +876,15 @@
 </div>
 
 
-
 <!-- 30 -->
 
 <div class="family-item square">
 
     <div class="family-visual">
-
         <img
             src="images/family/sama.png"
             alt="SAMA"
         >
-
     </div>
 
     <div class="family-name">
@@ -1058,18 +894,15 @@
 </div>
 
 
-
 <!-- 31 -->
 
 <div class="family-item wide">
 
     <div class="family-visual">
-
         <img
             src="images/family/Deco Inner Beings.png"
             alt="Deco Inner Beings"
         >
-
     </div>
 
     <div class="family-name">
@@ -1077,7 +910,6 @@
     </div>
 
 </div>
-
 
 
 </div>
@@ -1102,36 +934,29 @@ const menuList =
     document.querySelector(".menu-list");
 
 
-menuButton.onclick = function(e){
+menuButton.onclick = function(e) {
 
     e.preventDefault();
 
     const isOpen =
         menuList.style.display === "flex";
 
+    if (isOpen) {
 
-    if(isOpen){
+        menuList.style.display = "none";
 
-        menuList.style.display =
-            "none";
-
-        siteMenu.classList.remove(
-            "open"
-        );
+        siteMenu.classList.remove("open");
 
         menuButton.setAttribute(
             "aria-expanded",
             "false"
         );
 
-    }else{
+    } else {
 
-        menuList.style.display =
-            "flex";
+        menuList.style.display = "flex";
 
-        siteMenu.classList.add(
-            "open"
-        );
+        siteMenu.classList.add("open");
 
         menuButton.setAttribute(
             "aria-expanded",
