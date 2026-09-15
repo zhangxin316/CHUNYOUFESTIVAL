@@ -1,1 +1,1150 @@
 
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+>
+
+<title>CHUNYOU FAMILY — CHUNYOU FESTIVAL</title>
+
+<link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Noto+Sans+SC:wght@400;500;700&display=swap"
+    rel="stylesheet"
+>
+
+<link rel="stylesheet" href="style.css">
+
+
+<style>
+
+/* =========================
+   FAMILY PAGE
+========================= */
+
+.family-page{
+
+    min-height:100vh;
+    min-height:100svh;
+
+    padding:
+        120px
+        50px
+        140px;
+
+}
+
+
+.family-title{
+
+    text-align:center;
+
+    font-size:20px;
+
+    font-weight:400;
+
+    line-height:1.3;
+
+    letter-spacing:3px;
+
+    margin-bottom:100px;
+
+}
+
+
+
+/* =========================
+   FAMILY GRID
+========================= */
+
+.family-grid{
+
+    width:100%;
+
+    max-width:1180px;
+
+    margin:0 auto;
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    column-gap:70px;
+
+    row-gap:90px;
+
+}
+
+
+
+/* =========================
+   FAMILY ITEM
+========================= */
+
+.family-item{
+
+    position:relative;
+
+    min-width:0;
+
+    text-align:center;
+
+}
+
+
+.family-visual{
+
+    width:100%;
+
+    height:130px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+}
+
+
+.family-visual img{
+
+    display:block;
+
+    width:auto;
+
+    height:auto;
+
+    max-width:180px;
+
+    max-height:90px;
+
+    object-fit:contain;
+
+    transition:
+        opacity 0.35s ease,
+        transform 0.35s ease;
+
+}
+
+
+
+/* =========================
+   FAMILY NAME
+========================= */
+
+.family-name{
+
+    margin-top:20px;
+
+    color:#777;
+
+    font-size:12px;
+
+    font-weight:400;
+
+    line-height:1.5;
+
+    letter-spacing:1px;
+
+    opacity:0;
+
+    transform:translateY(4px);
+
+    transition:
+        opacity 0.3s ease,
+        transform 0.3s ease;
+
+}
+
+
+.family-item:hover .family-name{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+}
+
+
+.family-item:hover .family-visual img{
+
+    opacity:0.72;
+
+    transform:scale(0.98);
+
+}
+
+
+
+/* =========================
+   WIDE LOGOS
+========================= */
+
+.family-item.wide .family-visual img{
+
+    max-width:210px;
+
+    max-height:80px;
+
+}
+
+
+
+/* =========================
+   SMALL / SQUARE LOGOS
+========================= */
+
+.family-item.square .family-visual img{
+
+    max-width:105px;
+
+    max-height:105px;
+
+}
+
+
+
+/* =========================
+   PHOTO ITEMS
+========================= */
+
+.family-item.photo .family-visual{
+
+    height:180px;
+
+}
+
+
+.family-item.photo .family-visual img{
+
+    width:135px;
+
+    height:180px;
+
+    max-width:none;
+
+    max-height:none;
+
+    object-fit:cover;
+
+}
+
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:800px){
+
+    .family-page{
+
+        padding:
+            100px
+            22px
+            90px;
+
+    }
+
+
+    .family-title{
+
+        font-size:18px;
+
+        letter-spacing:2.5px;
+
+        margin-bottom:70px;
+
+    }
+
+
+    .family-grid{
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+        column-gap:28px;
+
+        row-gap:58px;
+
+    }
+
+
+    .family-visual{
+
+        height:100px;
+
+    }
+
+
+    .family-visual img{
+
+        max-width:125px;
+
+        max-height:70px;
+
+    }
+
+
+    .family-item.wide .family-visual img{
+
+        max-width:140px;
+
+        max-height:65px;
+
+    }
+
+
+    .family-item.square .family-visual img{
+
+        max-width:80px;
+
+        max-height:80px;
+
+    }
+
+
+    .family-name{
+
+        margin-top:14px;
+
+        font-size:11px;
+
+        line-height:1.45;
+
+        letter-spacing:0.5px;
+
+        opacity:1;
+
+        transform:none;
+
+    }
+
+
+    .family-item.photo .family-visual{
+
+        height:150px;
+
+    }
+
+
+    .family-item.photo .family-visual img{
+
+        width:112px;
+
+        height:150px;
+
+    }
+
+
+    .family-item:hover .family-visual img{
+
+        opacity:1;
+
+        transform:none;
+
+    }
+
+}
+
+</style>
+
+</head>
+
+
+
+<body>
+
+
+<!-- =========================
+     SITE MENU
+========================= -->
+
+<nav
+    class="site-menu"
+    id="site-menu"
+>
+
+    <a
+        href="#"
+        id="menu-button"
+        aria-label="Open menu"
+        aria-expanded="false"
+    >
+
+        <span class="menu-icon"></span>
+
+    </a>
+
+
+    <div class="menu-list">
+
+        <a href="archive.html">
+            Archive
+        </a>
+
+        <a href="festival.html">
+            Festival
+        </a>
+
+        <a href="news.html">
+            News
+        </a>
+
+        <a href="family.html">
+            Family
+        </a>
+
+        <a href="contact.html">
+            Contact
+        </a>
+
+    </div>
+
+</nav>
+
+
+
+<!-- =========================
+     FAMILY
+========================= -->
+
+<main class="family-page">
+
+
+<h1 class="family-title">
+    CHUNYOU FAMILY
+</h1>
+
+
+
+<div class="family-grid">
+
+
+
+<!-- 01 -->
+
+<div class="family-item wide">
+
+    <div class="family-visual">
+
+        <img
+            src="images/family/72岛文化.png"
+            alt="72岛文化"
+        >
+
+    </div>
+
+    <div class="family-name">
+        72岛文化
+    </div>
+
+</div>
+
+
+
+<!-- 02 -->
+
+<div class="family-item">
+
+    <div class="family-visual">
+
+        <img
+            src="images/family/北河三.png"
+            alt="北河三"
+        >
+
+    </div>
+
+    <div class="family-name">
+        北河三
+    </div>
+
+</div>
+
+
+
+<!-- 03 -->
+
+<div class="family-item wide">
+
+    <div class="family-visual">
+
+        <img
+            src="images/family/便利音乐.png"
+            alt="便利音乐"
+        >
+
+    </div>
+
+    <div class="family-name">
+        便利音乐
+    </div>
+
+</div>
+
+
+
+<!-- 04 -->
+
+<div class="family-item square">
+
+    <div class="family-visual">
+
+        <img
+            src="images/family/丙火创意.png"
+            alt="丙火创意"
+        >
+
+    </div>
+
+    <div class="family-name">
+        丙火创意
+    </div>
+
+</div>
+
+
+
+<!-- 05 -->
+
+<div class="family-item">
+
+    <div class="family-visual">
+
+        <img
+            src="images/family/东秩序.png"
+            alt="东秩序"
+        >
+
+    </div>
+
+    <div class="family-name">
+        东秩序
+    </div>
+
+</div>
+
+
+
+<!-- 06 -->
+
+<div class="family-item">
+
+    <div class="family-visual">
+
+        <img
+            src="images/family/梵木文创.png"
+            alt="梵木文创"
+        >
+
+    </div>
+
+    <div class="family-name">
+        梵木文创
+    </div>
+
+</div>
+
+
+
+<!-- 07 -->
+
+<div class="family-item wide">
+
+    <div class="family-visual">
+
+        <img
+            src="images/family/费那奇动画.png"
+            alt="费那奇动画"
+        >
+
+    </div>
+
+    <div class="family-name">
+        费那奇动画
+    </div>
+
+</div>
+
+
+
+<!-- 08 -->
+
+<div class="family-item">
+
+    <div class="family-visual">
+
+        <img
+            src="images/family/过载喜剧.png"
+            alt="过载喜剧"
+        >
+
+    </div>
+
+    <div class="family-name">
+        过载喜剧
+    </div>
+
+</div>
+
+
+
+<!-- 09 -->
+
+<div class="family-item wide">
+
+    <div class="family-visual">
+
+        <img
+            src="images/family/简单声学.png"
+            alt="简单声学"
+        >
+
+    </div>
+
+    <div class="family-name">
+        简单声学
+    </div>
+
+</div>
+
+
+
+<!-- 10 -->
+
+<div class="family-item square">
+
+    <div class="family-visual">
+
+        <img
+            src="images/family/平舟度川.jpeg"
+            alt="平舟度川"
+        >
+
+    </div>
+
+    <div class="family-name">
+        平舟度川
+    </div>
+
+</div>
+
+
+
+<!-- 11 -->
+
+<div class="family-item wide">
+
+    <div class="family-visual">
+
+        <img
+            src="images/family/瑞士文化基金会.png"
+            alt="瑞士文化基金会"
+        >
+
+    </div>
+
+    <div class="family-name">
+        瑞士文化基金会
+    </div>
+
+</div>
+
+
+
+<!-- 12 -->
+
+<div class="family-item">
+
+    <div class="family-visual">
+
+        <img
+            src="images/family/山顶露营.png"
+            alt="山顶露营"
+        >
+
+    </div>
+
+    <div class="family-name">
+        山顶露营
+    </div>
+
+</div>
+
+
+
+<!-- 13 -->
+
+<div class="family-item photo">
+
+    <div class="family-visual">
+
+        <img
+            src="images/family/瘦影.jpeg"
+            alt="瘦影"
+        >
+
+    </div>
+
+    <div class="family-name">
+        瘦影
+    </div>
+
+</div>
+
+
+
+<!-- 14 -->
+
+<div class="family-item">
+
+    <div class="family-visual">
+
+        <img
+            src="images/family/瞬时山野.png"
+            alt="瞬时山野"
+        >
+
+    </div>
+
+    <div class="family-name">
+        瞬时山野
+    </div>
+
+</div>
+
+
+
+<!-- 15 -->
+
+<div class="family-item square">
+
+    <div class="family-visual">
+
+        <img
+            src="images/family/厅.png"
+            alt="厅"
+        >
+
+    </div>
+
+    <div class="family-name">
+        厅
+    </div>
+
+</div>
+
+
+
+<!-- 16 -->
+
+<div class="family-item photo">
+
+    <div class="family-visual">
+
+        <img
+            src="images/family/余伟YuWei.jpg"
+            alt="余伟 YuWei"
+        >
+
+    </div>
+
+    <div class="family-name">
+        余伟 YuWei
+    </div>
+
+</div>
+
+
+
+<!-- 17 -->
+
+<div class="family-item">
+
+    <div class="family-visual">
+
+        <img
+            src="images/family/院子文创园.png"
+            alt="院子文创园"
+        >
+
+    </div>
+
+    <div class="family-name">
+        院子文创园
+    </div>
+
+</div>
+
+
+
+<!-- 18 -->
+
+<div class="family-item">
+
+    <div class="family-visual">
+
+        <img
+            src="images/family/张霖.png"
+            alt="张霖"
+        >
+
+    </div>
+
+    <div class="family-name">
+        张霖
+    </div>
+
+</div>
+
+
+
+<!-- 19 -->
+
+<div class="family-item square">
+
+    <div class="family-visual">
+
+        <img
+            src="images/family/诊所.png"
+            alt="诊所"
+        >
+
+    </div>
+
+    <div class="family-name">
+        诊所
+    </div>
+
+</div>
+
+
+
+<!-- 20 -->
+
+<div class="family-item">
+
+    <div class="family-visual">
+
+        <img
+            src="images/family/卓锐文化.png"
+            alt="卓锐文化"
+        >
+
+    </div>
+
+    <div class="family-name">
+        卓锐文化
+    </div>
+
+</div>
+
+
+
+<!-- 21 -->
+
+<div class="family-item square">
+
+    <div class="family-visual">
+
+        <img
+            src="images/family/CDCR.png"
+            alt="CDCR"
+        >
+
+    </div>
+
+    <div class="family-name">
+        CDCR
+    </div>
+
+</div>
+
+
+
+<!-- 22 -->
+
+<div class="family-item wide">
+
+    <div class="family-visual">
+
+        <img
+            src="images/family/DhiDhiDhi.png"
+            alt="DhiDhiDhi"
+        >
+
+    </div>
+
+    <div class="family-name">
+        DhiDhiDhi
+    </div>
+
+</div>
+
+
+
+<!-- 23 -->
+
+<div class="family-item wide">
+
+    <div class="family-visual">
+
+        <img
+            src="images/family/manual-beings-logo.png"
+            alt="Manual Beings"
+        >
+
+    </div>
+
+    <div class="family-name">
+        Manual Beings
+    </div>
+
+</div>
+
+
+
+<!-- 24 -->
+
+<div class="family-item wide">
+
+    <div class="family-visual">
+
+        <img
+            src="images/family/Morning集物所.png"
+            alt="Morning 集物所"
+        >
+
+    </div>
+
+    <div class="family-name">
+        Morning 集物所
+    </div>
+
+</div>
+
+
+
+<!-- 25 -->
+
+<div class="family-item">
+
+    <div class="family-visual">
+
+        <img
+            src="images/family/MSN.png"
+            alt="MSN"
+        >
+
+    </div>
+
+    <div class="family-name">
+        MSN
+    </div>
+
+</div>
+
+
+
+<!-- 26 -->
+
+<div class="family-item wide">
+
+    <div class="family-visual">
+
+        <img
+            src="images/family/muffletruffle.png"
+            alt="Muffle Truffle"
+        >
+
+    </div>
+
+    <div class="family-name">
+        Muffle Truffle
+    </div>
+
+</div>
+
+
+
+<!-- 27 -->
+
+<div class="family-item wide">
+
+    <div class="family-visual">
+
+        <img
+            src="images/family/NEWNOISE.png"
+            alt="NEW NOISE"
+        >
+
+    </div>
+
+    <div class="family-name">
+        NEW NOISE
+    </div>
+
+</div>
+
+
+
+<!-- 28 -->
+
+<div class="family-item photo">
+
+    <div class="family-visual">
+
+        <img
+            src="images/family/Niffler.jpeg"
+            alt="Niffler"
+        >
+
+    </div>
+
+    <div class="family-name">
+        Niffler
+    </div>
+
+</div>
+
+
+
+<!-- 29 -->
+
+<div class="family-item">
+
+    <div class="family-visual">
+
+        <img
+            src="images/family/nulab.png"
+            alt="Nulab"
+        >
+
+    </div>
+
+    <div class="family-name">
+        Nulab
+    </div>
+
+</div>
+
+
+
+<!-- 30 -->
+
+<div class="family-item square">
+
+    <div class="family-visual">
+
+        <img
+            src="images/family/sama.png"
+            alt="SAMA"
+        >
+
+    </div>
+
+    <div class="family-name">
+        SAMA
+    </div>
+
+</div>
+
+
+
+<!-- 31 -->
+
+<div class="family-item wide">
+
+    <div class="family-visual">
+
+        <img
+            src="images/family/Deco Inner Beings.png"
+            alt="Deco Inner Beings"
+        >
+
+    </div>
+
+    <div class="family-name">
+        Deco Inner Beings
+    </div>
+
+</div>
+
+
+
+</div>
+
+</main>
+
+
+
+<script>
+
+/* =========================
+   SITE MENU
+========================= */
+
+const siteMenu =
+    document.getElementById("site-menu");
+
+const menuButton =
+    document.getElementById("menu-button");
+
+const menuList =
+    document.querySelector(".menu-list");
+
+
+menuButton.onclick = function(e){
+
+    e.preventDefault();
+
+    const isOpen =
+        menuList.style.display === "flex";
+
+
+    if(isOpen){
+
+        menuList.style.display =
+            "none";
+
+        siteMenu.classList.remove(
+            "open"
+        );
+
+        menuButton.setAttribute(
+            "aria-expanded",
+            "false"
+        );
+
+    }else{
+
+        menuList.style.display =
+            "flex";
+
+        siteMenu.classList.add(
+            "open"
+        );
+
+        menuButton.setAttribute(
+            "aria-expanded",
+            "true"
+        );
+
+    }
+
+};
+
+</script>
+
+
+</body>
+
+</html>
