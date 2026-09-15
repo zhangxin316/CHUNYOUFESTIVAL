@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 
 <head>
 
@@ -12,11 +12,11 @@
        SEO
   ========================= -->
 
-  <title>CHUNYOU FESTIVAL 春游音乐节 — Chengdu, China</title>
+  <title>春游音乐节 CHUNYOU FESTIVAL — 成都 Chengdu</title>
 
   <meta
     name="description"
-    content="CHUNYOU FESTIVAL 春游音乐节，创立于2013年的成都。音乐、艺术、朋友与春天，在这里相遇。"
+    content="春游音乐节 CHUNYOU FESTIVAL，2013年创立于成都。一个关于音乐、艺术、朋友、相遇与春天的音乐节。"
   >
 
   <meta
@@ -41,10 +41,12 @@
       {
         "@type": "Organization",
         "@id": "https://www.chunyoufestival.com/#organization",
-        "name": "CHUNYOU FESTIVAL",
+        "name": "春游音乐节 CHUNYOU FESTIVAL",
         "alternateName": [
+          "CHUNYOU FESTIVAL",
           "春游音乐节",
-          "CHUNYOU"
+          "CHUNYOU",
+          "春游"
         ],
         "url": "https://www.chunyoufestival.com/",
         "logo": "https://www.chunyoufestival.com/logo.png",
@@ -57,8 +59,11 @@
         "@type": "WebSite",
         "@id": "https://www.chunyoufestival.com/#website",
         "url": "https://www.chunyoufestival.com/",
-        "name": "CHUNYOU FESTIVAL 春游音乐节",
-        "alternateName": "春游音乐节",
+        "name": "春游音乐节 CHUNYOU FESTIVAL",
+        "alternateName": [
+          "CHUNYOU FESTIVAL",
+          "春游音乐节"
+        ],
         "publisher": {
           "@id": "https://www.chunyoufestival.com/#organization"
         },
@@ -133,10 +138,37 @@
     }
 
 
+    /* =========================
+       CHINESE BRAND NAME
+    ========================= */
+
+    .chinese-name {
+      margin-top: 8px;
+
+      font-family: "Noto Sans SC", sans-serif;
+
+      font-size: 13px;
+      font-weight: 400;
+
+      letter-spacing: 0.18em;
+
+      color: #fff;
+
+      opacity: 0.7;
+
+      text-align: center;
+    }
+
+
     @media (max-width: 800px) {
 
       .entry-text {
         font-size: 28px;
+      }
+
+      .chinese-name {
+        margin-top: 7px;
+        font-size: 12px;
       }
 
     }
@@ -150,23 +182,29 @@
 
 
   <!-- =========================
-       ORIGINAL HOMEPAGE
+       HOMEPAGE
   ========================= -->
 
   <main class="hero">
 
     <img
       src="logo.png"
-      alt="CHUNYOU FESTIVAL 春游音乐节"
+      alt="春游音乐节 CHUNYOU FESTIVAL 官方标志"
       class="logo"
     >
 
     <h1>CHUNYOU FESTIVAL</h1>
 
-    <p class="since">EST. 2013</p>
+    <p class="chinese-name">
+      春游音乐节
+    </p>
+
+    <p class="since">
+      EST. 2013
+    </p>
 
 
-    <nav class="menu">
+    <nav class="menu" aria-label="Main navigation">
 
       <a href="archive.html">
         Archive
@@ -203,7 +241,7 @@
     id="entry-screen"
     role="button"
     tabindex="0"
-    aria-label="Enter CHUNYOU FESTIVAL"
+    aria-label="Enter CHUNYOU FESTIVAL 春游音乐节"
   >
 
     <p class="entry-text">
