@@ -75,6 +75,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
+
+    overflow: hidden;
 }
 
 
@@ -83,7 +85,9 @@
    BLACK → WHITE
 ========================= */
 
-.family-item:not(.photo):not(.original) .family-visual img {
+.family-item:not(.photo):not(.original):not(.reverse-logo)
+.family-visual img {
+
     display: block;
 
     width: auto;
@@ -106,7 +110,9 @@
    WIDE LOGOS
 ========================= */
 
-.family-item.wide:not(.photo):not(.original) .family-visual img {
+.family-item.wide:not(.photo):not(.original):not(.reverse-logo)
+.family-visual img {
+
     max-width: 210px;
     max-height: 82px;
 }
@@ -116,9 +122,40 @@
    SQUARE LOGOS
 ========================= */
 
-.family-item.square:not(.photo):not(.original) .family-visual img {
+.family-item.square:not(.photo):not(.original):not(.reverse-logo)
+.family-visual img {
+
     max-width: 105px;
     max-height: 105px;
+}
+
+
+/* =========================
+   REVERSE LOGO
+   WHITE BG → BLACK
+   DARK / COLOR LOGO → WHITE
+========================= */
+
+.family-item.reverse-logo .family-visual img {
+
+    display: block;
+
+    width: auto;
+    height: auto;
+
+    max-width: 210px;
+    max-height: 82px;
+
+    object-fit: contain;
+
+    filter:
+        grayscale(100%)
+        invert(100%)
+        contrast(500%);
+
+    transition:
+        opacity 0.3s ease,
+        transform 0.3s ease;
 }
 
 
@@ -127,6 +164,7 @@
 ========================= */
 
 .family-item.original .family-visual img {
+
     display: block;
 
     width: auto;
@@ -154,6 +192,7 @@
 }
 
 .family-item.photo .family-visual img {
+
     display: block;
 
     width: 120px;
@@ -186,6 +225,7 @@
 ========================= */
 
 .family-name {
+
     margin-top: 10px;
 
     color: #777;
@@ -232,7 +272,6 @@
 
     .family-grid {
         grid-template-columns: repeat(2, 1fr);
-
         column-gap: 22px;
         row-gap: 26px;
     }
@@ -241,22 +280,35 @@
         height: 95px;
     }
 
-    .family-item:not(.photo):not(.original) .family-visual img {
+    .family-item:not(.photo):not(.original):not(.reverse-logo)
+    .family-visual img {
+
         max-width: 125px;
         max-height: 68px;
     }
 
-    .family-item.wide:not(.photo):not(.original) .family-visual img {
+    .family-item.wide:not(.photo):not(.original):not(.reverse-logo)
+    .family-visual img {
+
         max-width: 140px;
         max-height: 65px;
     }
 
-    .family-item.square:not(.photo):not(.original) .family-visual img {
+    .family-item.square:not(.photo):not(.original):not(.reverse-logo)
+    .family-visual img {
+
         max-width: 78px;
         max-height: 78px;
     }
 
+    .family-item.reverse-logo .family-visual img {
+
+        max-width: 140px;
+        max-height: 65px;
+    }
+
     .family-item.original .family-visual img {
+
         max-width: 90px;
         max-height: 82px;
     }
@@ -266,11 +318,13 @@
     }
 
     .family-item.photo .family-visual img {
+
         width: 105px;
         height: 135px;
     }
 
     .family-name {
+
         margin-top: 8px;
 
         font-size: 11px;
@@ -430,7 +484,7 @@
 
 <!-- 06 BIE的音乐 -->
 
-<div class="family-item wide">
+<div class="family-item wide reverse-logo">
 
     <div class="family-visual">
         <img
